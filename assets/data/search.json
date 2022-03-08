@@ -1,0 +1,891 @@
+{
+    "data":[
+        {
+            "id":0,
+
+            "name_En":"Alexandria Beirut",
+            "name_Ar":"إسكندرية بيروت",
+            "pages":175,
+            "price":"25.00 EGP",
+            "seller_ar":"دار الشروق",
+            "seller_en":"Dar Elshrouk",
+            "writer_ar":"نرمين نزار",
+            "writer_en":  "Nermin Nazar",
+            "img":"https://assets.asfar.io/uploads/2022/03/05220611/alexandria-beirut-nermin-nezar.jpg",
+            "hull_num": 1,
+            "section_num":18,
+            "lat":"",
+            "long":"",
+            "semeller_books":[],
+            "dar_elnasher":[
+                {
+                "id":0,
+                "name_ar": " دار الشروق",
+                "name_en":"Dar Elshrouk",
+                "lat":"",
+                "long":"",
+                "status_en":"Most seller",
+                "status_ar":"الأكثر مبيعا",
+                "address_en":"Cairo",
+                "address_ar":"القاهره",
+                "area":"15 Km"
+                },
+                {
+                    "id":1,
+                    "name_ar":"دار الرسم",
+                    "name_en":"Dar Elrasm",
+                    "lat":"",
+                    "long":"",
+                    "status_en":"most expensive",
+                    "status_ar":"الاعلي سعرا",
+                    "address_en":"Mansoura",
+                    "address_ar":"المنصوره",
+                    "area":"115 Km"
+                    },
+                    {
+                        "id":2,
+                        "name_ar": "اوتو ميديا",
+                        "name_en":"Auto Media",
+                        "lat":"",
+                        "long":"",
+                        "status_en":"closest to you",
+                        "status_ar": "الاقرب لك",
+                        "address_en":"6 October",
+                        "address_ar":"6 اكتوبر",
+                        "area":"25 Km"
+                        }
+                ]
+            
+            
+        },
+
+        {
+            "id":1,
+            "name_En":"The Islamic religion's vision of preserving the environment",
+            "name_Ar":"رؤية الدين الإسلامي في الحفاظ على البيئة",
+            "pages":164,
+            "price":"25.00 EGP",
+            "seller_ar":"دار الشروق",
+            "seller_en":"Dar Elshrouk",
+            "writer_ar":"عبد الله شحاتة",
+            "writer_en":  "Abdullah Shehata",
+            "img":"https://assets.asfar.io/uploads/2022/03/05220615/islamic-religion-in-the-conservation-of-the-environment-abdullah-shehata.jpg",
+            "hull_num": 1,
+            "section_num":18,
+            "lat":"",
+            "long":"",
+            "semeller_books":[],
+            "dar_elnasher":[
+                {
+                "id":0,
+                "name_ar": " الكرمة للنشر",
+                "name_en":"Karma Publishing",
+                "lat":"",
+                "long":"",
+                "status_en":"Most seller",
+                "status_ar":"الأكثر مبيعا",
+                "address_en":"ElNozha",
+                "address_ar":"النزهه",
+                "area":"30 Km"
+                },
+                {
+                    "id":1,
+                    "name_ar":"دارالفكر الجامعي",
+                    "name_en":"University House of Thought",
+                    "lat":"",
+                    "long":"",
+                    "status_en":"most expensive",
+                    "status_ar":"الاعلي سعرا",
+                    "address_en":"Alexandria",
+                    "address_ar":"الاسكندريه",
+                    "area":"200 Km"
+                    },
+                    {
+                        "id":2,
+                        "name_ar": "دار الاخوه للنشر",
+                        "name_en":"Brothers Publishing House",
+                        "lat":"",
+                        "long":"",
+                        "status_en":"closest to you",
+                        "status_ar": "الاقرب لك",
+                        "address_en":"Shobra",
+                        "address_ar":"شبرا",
+                        "area":"20 Km"
+                        }
+                ]
+            
+            
+        },
+    
+        {
+            "id":2,
+            "name_En":"From the field to the court - memoirs of a minister in the time of the revolution",
+            "name_Ar":"من الميدان إلى الديوان – مذكرات وزير في زمن الثورة",
+            "pages":147,
+            "price":"65.00 EGP",
+            "seller_ar":"دار الشروق",
+            "seller_en":"Dar Elshrouk",
+            "writer_ar":"جودة عبد الخالق",
+            "writer_en":  "Quality Abdul Khaleq",
+            "img":"https://assets.asfar.io/uploads/2022/03/05220559/from-the-field-to-the-court.jpg",
+            "hull_num": 1,
+            "section_num":18,
+            "lat":"",
+            "long":"",
+            "semeller_books":[
+                {
+                    "id":0,
+                    "name_En":"Stabilization and adaptation in Egypt: reform or waste of industrialization?",
+                    "name_Ar":"التثبيت والتكيف في مصر: إصلاح أم إهدار للتصنيع؟",
+                    "pages":377,
+                    "price":"50.00 EGP",
+                    "seller_ar":"المركز القومي للترجمة",
+                    "seller_en":"National Center for Translation",
+                    "writer_ar":"جودة عبد الخالق",
+                    "writer_en":  "Quality Abdul Khaleq",
+                    "img":"https://assets.asfar.io/uploads/2021/05/fixation-and-adaptation-in-egypt.jpg",
+                    "hull_num": 2,
+                    "section_num":17,
+                    "lat":"",
+                    "long":"",
+                    "semeller_books":[],
+                    "dar_elnasher":[
+                        {
+                        "id":0,
+                        "name_ar": "دار دوّن",
+                        "name_en":"home don",
+                        "lat":"",
+                        "long":"",
+                        "status_en":"Most seller",
+                        "status_ar":"الأكثر مبيعا",
+                        "address_en":"mokatam",
+                        "address_ar":"المقطم",
+                        "area":"45 Km"
+                        },
+                        {
+                            "id":1,
+                            "name_ar":"الدوليه للكتب العلميه",
+                            "name_en":"International Scientific Books",
+                            "lat":"",
+                            "long":"",
+                            "status_en":"most expensive",
+                            "status_ar":"الاعلي سعرا",
+                            "address_en":"Nasr city",
+                            "address_ar":"مدينة نصر",
+                            "area":"30 Km"
+                            },
+                            {
+                                "id":2,
+                                "name_ar": "زين للنشر و التوزيع",
+                                "name_en":"Zein for Publishing ",
+                                "lat":"",
+                                "long":"",
+                                "status_en":"farthest away from you",
+                                "status_ar": "الابعد لك",
+                                "address_en":"Alexandria",
+                                "address_ar":"الاسكندريه",
+                                "area":"200 Km"
+                                }
+                        ]
+                }
+
+               
+                
+            ],
+            "dar_elnasher":[
+                {
+                "id":0,
+                "name_ar": "دار دوّن",
+                "name_en":"home don",
+                "lat":"",
+                "long":"",
+                "status_en":"Most seller",
+                "status_ar":"الأكثر مبيعا",
+                "address_en":"mokatam",
+                "address_ar":"المقطم",
+                "area":"45 Km"
+                },
+                {
+                    "id":1,
+                    "name_ar":"الدوليه للكتب العلميه",
+                    "name_en":"International Scientific Books",
+                    "lat":"",
+                    "long":"",
+                    "status_en":"most expensive",
+                    "status_ar":"الاعلي سعرا",
+                    "address_en":"Nasr city",
+                    "address_ar":"مدينة نصر",
+                    "area":"30 Km"
+                    },
+                    {
+                        "id":2,
+                        "name_ar": "زين للنشر و التوزيع",
+                        "name_en":"Zein for Publishing ",
+                        "lat":"",
+                        "long":"",
+                        "status_en":"farthest away from you",
+                        "status_ar": "الابعد لك",
+                        "address_en":"Alexandria",
+                        "address_ar":"الاسكندريه",
+                        "area":"200 Km"
+                        }
+                ]
+            
+            
+        },
+
+        {
+            "id":3,
+            "name_En":"Omar bin Abdul Aziz, the fifth caliph",
+            "name_Ar":"عمر بن عبد العزيز خامس الخلفاء",
+            "pages":219,
+            "price":"68.00 EGP",
+            "seller_ar":"دار الشروق",
+            "seller_en":"Dar Elshrouk",
+            "writer_ar":"عبد الرحمن الشرقاوي",
+            "writer_en":  "Abdul Rahman Al-Sharqawi",
+            "img":"https://assets.asfar.io/uploads/2022/03/05220549/omar-bin-abdul-aziz-the-fifth-caliph.jpg",
+            "hull_num": 2,
+            "section_num":17,
+            "lat":"",
+            "long":"",
+            "semeller_books":[
+                {
+                    "id":0,
+                    "name_En":"Ibn Taymiyyah: the tortured jurist",
+                    "name_Ar":"ابن تيمية: الفقيه المعذب",
+                    "pages":199,
+                    "price":"70.00 EGP",
+                    "seller_ar":"دار الشروق",
+                    "seller_en":"Dar Elshrouk",
+                    "writer_ar":"عبد الرحمن الشرقاوي",
+                    "writer_en":  "Abdul Rahman Al-Sharqawi",
+                    "img":"https://assets.asfar.io/uploads/2020/08/%D8%A7%D8%A8%D9%86-%D8%AA%D9%8A%D9%85%D9%8A%D8%A9-%D8%A7%D9%84%D9%81%D9%82%D9%8A%D9%87-%D8%A7%D9%84%D9%85%D8%B9%D8%B0%D8%A8.jpg",
+                    "hull_num": 2,
+                    "section_num":17,
+                    "lat":"",
+                    "long":"",
+                    "semeller_books":[],
+                    "dar_elnasher":[
+                        {
+                        "id":0,
+                        "name_ar": "دار دوّن",
+                        "name_en":"home don",
+                        "lat":"",
+                        "long":"",
+                        "status_en":"Most seller",
+                        "status_ar":"الأكثر مبيعا",
+                        "address_en":"mokatam",
+                        "address_ar":"المقطم",
+                        "area":"45 Km"
+                        },
+                        {
+                            "id":1,
+                            "name_ar":"ميريت",
+                            "name_en":"Meret",
+                            "lat":"",
+                            "long":"",
+                            "status_en":"most expensive",
+                            "status_ar":"الاعلي سعرا",
+                            "address_en":"Kasr Elnil",
+                            "address_ar":"قصر النيل",
+                            "area":"20 Km"
+                            }
+                          
+                        ]
+                },  
+                {
+                    "id":1,
+                    "name_En":"Hussein is a martyr",
+                    "name_Ar":"الحسين شهيدا",
+                    "pages":160,
+                    "price":"75.00 EGP",
+                    "seller_ar":"دار الشروق",
+                    "seller_en":"Sunrise House",
+                    "writer_ar":"عبد الرحمن الشرقاوي",
+                    "writer_en":  "Abdul Rahman Al-Sharqawi",
+                    "img":"https://assets.asfar.io/uploads/2020/08/%D8%A7%D9%84%D8%AD%D8%B3%D9%8A%D9%86-%D8%B4%D9%87%D9%8A%D8%AF%D8%A7.jpg",
+                    "hull_num": 2,
+                    "section_num":17,
+                    "lat":"",
+                    "long":"",
+                    "semeller_books":[],
+                    "dar_elnasher":[
+                        {
+                        "id":0,
+                        "name_ar": "دار دوّن",
+                        "name_en":"home don",
+                        "lat":"",
+                        "long":"",
+                        "status_en":"Most seller",
+                        "status_ar":"الأكثر مبيعا",
+                        "address_en":"mokatam",
+                        "address_ar":"المقطم",
+                        "area":"45 Km"
+                        },
+                        {
+                            "id":1,
+                            "name_ar":"ميريت",
+                            "name_en":"Meret",
+                            "lat":"",
+                            "long":"",
+                            "status_en":"most expensive",
+                            "status_ar":"الاعلي سعرا",
+                            "address_en":"Kasr Elnil",
+                            "address_ar":"قصر النيل",
+                            "area":"20 Km"
+                            }
+                          
+                        ]
+                },
+                {
+                    "id":2,
+                    "name_En":"back streets",
+                    "name_Ar":"الشوارع الخلفية",
+                    "pages":250,
+                    "price":"110.00 EGP",
+                    "seller_ar":"السراج",
+                    "seller_en":"alsiraaj",
+                    "writer_ar":"عبد الرحمن الشرقاوي",
+                    "writer_en":  "Abdul Rahman Al-Sharqawi",
+                    "img":"https://assets.asfar.io/uploads/2020/08/%D8%A7%D9%84%D8%B4%D9%88%D8%A7%D8%B1%D8%B9-%D8%A7%D9%84%D8%AE%D9%84%D9%81%D9%8A%D8%A9.jpg",
+                    "hull_num": 2,
+                    "section_num":28,
+                    "lat":"",
+                    "long":"",
+                    "semeller_books":[],
+                    "dar_elnasher":[
+                        {
+                        "id":0,
+                        "name_ar": "دار دوّن",
+                        "name_en":"home don",
+                        "lat":"",
+                        "long":"",
+                        "status_en":"Most seller",
+                        "status_ar":"الأكثر مبيعا",
+                        "address_en":"mokatam",
+                        "address_ar":"المقطم",
+                        "area":"45 Km"
+                        },
+                        {
+                            "id":1,
+                            "name_ar":"ميريت",
+                            "name_en":"Meret",
+                            "lat":"",
+                            "long":"",
+                            "status_en":"most expensive",
+                            "status_ar":"الاعلي سعرا",
+                            "address_en":"Kasr Elnil",
+                            "address_ar":"قصر النيل",
+                            "area":"20 Km"
+                            }
+                          
+                        ]
+                }
+                
+            ],
+            "dar_elnasher":[
+                {
+                "id":0,
+                "name_ar": "دار دوّن",
+                "name_en":"home don",
+                "lat":"",
+                "long":"",
+                "status_en":"Most seller",
+                "status_ar":"الأكثر مبيعا",
+                "address_en":"mokatam",
+                "address_ar":"المقطم",
+                "area":"45 Km"
+                },
+                {
+                    "id":1,
+                    "name_ar":"ميريت",
+                    "name_en":"Meret",
+                    "lat":"",
+                    "long":"",
+                    "status_en":"most expensive",
+                    "status_ar":"الاعلي سعرا",
+                    "address_en":"Kasr Elnil",
+                    "address_ar":"قصر النيل",
+                    "area":"20 Km"
+                    }
+                  
+                ]
+            
+            
+        },
+        
+        
+        {
+            "id":4,
+            "name_En":"My share of the truth: a first minister in Bourguiba's presidency testifies",
+            "name_Ar":"نصيبي من الحقيقة: وزير أول في رئاسة بورقيبة يشهد",
+            "pages":666,
+            "price":"100 EGP",
+            "seller_ar":"دار الشروق",
+            "seller_en":"Dar Elshrouk",
+            "writer_ar":"محمد مزالي",
+            "writer_en":  "Mohamed Mazali",
+            "img":"https://assets.asfar.io/uploads/2022/03/05220545/my-share-of-the-truth.jpg",
+            "hull_num": 1,
+            "section_num":18,
+            "lat":"",
+            "long":"",
+            "semeller_books":[],
+            "dar_elnasher":[
+                {
+                "id":0,
+                "name_ar": "الرواق للنشر والتوزيع",
+                "name_en":"Al Rewaq for Publishing and Distribution",
+                "lat":"",
+                "long":"",
+                "status_en":"Most seller",
+                "status_ar":"الأكثر مبيعا",
+                "address_en":"Ramseess",
+                "address_ar":"رمسيس",
+                "area":"50 Km"
+                }
+                  ]
+            
+            
+        },
+
+
+        {
+            "id":5,
+            "name_En":"Arsene Lupine at Barnett Agency",
+            "name_Ar":"أرسين لوبين في وكالة بارنيت",
+            "pages":160,
+            "price":"65.00 EGP",
+            "seller_ar":"الرواق للنشر والتوزيع",
+            "seller_en":"Al Rewaq for Publishing and Distribution",
+            "writer_ar":"موريس لوبلان",
+            "writer_en":  "Maurice Leblanc",
+            "img":"https://assets.asfar.io/uploads/2022/02/10200838/arsene-lupin-lagence-barnett.jpg",
+            "hull_num": 2,
+            "section_num":17,
+            "lat":"",
+            "long":"",
+            "semeller_books":[
+                {
+                    "id":0,
+                    "name_En":"The Adventures of Arsene Lupine: The Hollow Needle Puzzle",
+                    "name_Ar":"مغامرات أرسين لوبين: لغز الإبرة المجوفة",
+                    "pages":248,
+                    "price":"75.00 EGP",
+                    "seller_ar":"عصير الكتب",
+                    "seller_en":"easir alkutub",
+                    "writer_ar":"موريس لوبلان",
+                    "writer_en":  "Maurice Leblanc",
+                    "img":"https://assets.asfar.io/uploads/2021/10/%D9%84%D9%88%D8%A8%D9%8A%D9%86-%D9%85%D9%88%D8%B1%D8%B3%D9%8A%D9%86-%D9%84%D9%88%D8%A8%D9%84%D8%A7%D9%86.jpg",
+                    "hull_num": 1,
+                    "section_num":11,
+                    "lat":"",
+                    "long":"",
+                    "semeller_books":[],
+                    "dar_elnasher":[
+                        {
+                        "id":0,
+                        "name_ar": "الرواق للنشر والتوزيع",
+                        "name_en":"Al Rewaq for Publishing and Distribution",
+                        "lat":"",
+                        "long":"",
+                        "status_en":"Most seller",
+                        "status_ar":"الأكثر مبيعا",
+                        "address_en":"Ramsees",
+                        "address_ar":"رمسيس",
+                        "area":"15 Km"
+                        },
+                        {
+                            "id":1,
+                            "name_ar":" مبتدأ للنشر",
+                            "name_en":" mubtada lilnashri",
+                            "lat":"",
+                            "long":"",
+                            "status_en":"most expensive",
+                            "status_ar":"الاعلي سعرا",
+                            "address_en":"Cairo",
+                            "address_ar":"القاهره",
+                            "area":"25 Km"
+                            }
+                          
+                        ]
+                },  
+                {
+                    "id":1,
+                    "name_En":"How do we understand this religion",
+                    "name_Ar":"أرسين لوبين: اللص الظريف",
+                    "pages":267,
+                    "price":"65.00 EGP",
+                    "seller_ar":"الرواق للنشر والتوزيع",
+                    "seller_en":"Al Rewaq for Publishing and Distribution",
+                    "writer_ar":"موريس لوبلان",
+                    "writer_en":  "Maurice Leblanc",
+                    "img":"https://assets.asfar.io/uploads/2021/07/arseen-lopen-gentleman-cambrioleur.jpg",
+                    "hull_num": 2,
+                    "section_num":11,
+                    "lat":"",
+                    "long":"",
+                    "semeller_books":[],
+                    "dar_elnasher":[
+                        {
+                        "id":0,
+                        "name_ar": "الرواق للنشر والتوزيع",
+                        "name_en":"Al Rewaq for Publishing and Distribution",
+                        "lat":"",
+                        "long":"",
+                        "status_en":"Most seller",
+                        "status_ar":"الأكثر مبيعا",
+                        "address_en":"Ramsees",
+                        "address_ar":"رمسيس",
+                        "area":"15 Km"
+                        },
+                        {
+                            "id":1,
+                            "name_ar":" مبتدأ للنشر",
+                            "name_en":" mubtada lilnashri",
+                            "lat":"",
+                            "long":"",
+                            "status_en":"most expensive",
+                            "status_ar":"الاعلي سعرا",
+                            "address_en":"Cairo",
+                            "address_ar":"القاهره",
+                            "area":"25 Km"
+                            }
+                          
+                        ]
+                },
+                {
+                    "id":2,
+                    "name_En":"Arsene Lupine vs Sherlock Holmes",
+                    "name_Ar":"أرسين لوبين يواجه شرلوك هولمز",
+                    "pages":310,
+                    "price":"75.00 EGP",
+                    "seller_ar":"الرواق للنشر والتوزيع",
+                    "seller_en":"Al Rewaq for Publishing and Distribution",
+                    "writer_ar":"موريس لوبلان",
+                    "writer_en":  "Maurice Leblanc",
+                    "img":"https://assets.asfar.io/uploads/2021/07/Arsene-Lupin-vs.-Sherlock-Holmes.jpg",
+                    "hull_num": 2,
+                    "section_num":12,
+                    "lat":"",
+                    "long":"",
+                    "semeller_books":[],
+                    "dar_elnasher":[
+                        {
+                        "id":0,
+                        "name_ar": "الرواق للنشر والتوزيع",
+                        "name_en":"Al Rewaq for Publishing and Distribution",
+                        "lat":"",
+                        "long":"",
+                        "status_en":"Most seller",
+                        "status_ar":"الأكثر مبيعا",
+                        "address_en":"Ramsees",
+                        "address_ar":"رمسيس",
+                        "area":"15 Km"
+                        },
+                        {
+                            "id":1,
+                            "name_ar":" مبتدأ للنشر",
+                            "name_en":" mubtada lilnashri",
+                            "lat":"",
+                            "long":"",
+                            "status_en":"most expensive",
+                            "status_ar":"الاعلي سعرا",
+                            "address_en":"Cairo",
+                            "address_ar":"القاهره",
+                            "area":"25 Km"
+                            }
+                          
+                        ]
+                },
+                {
+                    "id":3,
+                    "name_En":"Arsene Lupine vs Sherlock Holmes",
+                    "name_Ar":"أرسين لوبين يواجه شرلوك هولمز",
+                    "pages":232,
+                    "price":"75.00 EGP",
+                    "seller_ar":"عصير الكتب",
+                    "seller_en":"easir alkutub",
+                    "writer_ar":"موريس لوبلان",
+                    "writer_en":  "Maurice Leblanc",
+                    "img":"https://assets.asfar.io/uploads/2022/02/27232113/arsene-lupin-versus-herlock-sholmes-1.jpg",
+                    "hull_num": 2,
+                    "section_num":13,
+                    "lat":"",
+                    "long":"",
+                    "semeller_books":[],
+                    "dar_elnasher":[
+                        {
+                        "id":0,
+                        "name_ar": "الرواق للنشر والتوزيع",
+                        "name_en":"Al Rewaq for Publishing and Distribution",
+                        "lat":"",
+                        "long":"",
+                        "status_en":"Most seller",
+                        "status_ar":"الأكثر مبيعا",
+                        "address_en":"Ramsees",
+                        "address_ar":"رمسيس",
+                        "area":"15 Km"
+                        },
+                        {
+                            "id":1,
+                            "name_ar":" مبتدأ للنشر",
+                            "name_en":" mubtada lilnashri",
+                            "lat":"",
+                            "long":"",
+                            "status_en":"most expensive",
+                            "status_ar":"الاعلي سعرا",
+                            "address_en":"Cairo",
+                            "address_ar":"القاهره",
+                            "area":"25 Km"
+                            }
+                          
+                        ]
+                }
+                
+            ],
+            "dar_elnasher":[
+                {
+                "id":0,
+                "name_ar": "الرواق للنشر والتوزيع",
+                "name_en":"Al Rewaq for Publishing and Distribution",
+                "lat":"",
+                "long":"",
+                "status_en":"Most seller",
+                "status_ar":"الأكثر مبيعا",
+                "address_en":"Ramsees",
+                "address_ar":"رمسيس",
+                "area":"15 Km"
+                },
+                {
+                    "id":1,
+                    "name_ar":" مبتدأ للنشر",
+                    "name_en":" mubtada lilnashri",
+                    "lat":"",
+                    "long":"",
+                    "status_en":"most expensive",
+                    "status_ar":"الاعلي سعرا",
+                    "address_en":"Cairo",
+                    "address_ar":"القاهره",
+                    "area":"25 Km"
+                    }
+                  
+                ]
+            
+            
+        },
+
+
+        {
+            "id":3,
+            "name_En":"fancy art",
+            "name_Ar":"فن الهوى",
+            "pages":262,
+            "price":"65.00 EGP",
+            "seller_ar":"دار الشروق",
+            "seller_en":"Dar Elshrouk",
+            "writer_ar":"أوفيد",
+            "writer_en":  "Ovid",
+            "img":"https://assets.asfar.io/uploads/2022/03/05220617/fancy-art-ovid.jpg",
+            "hull_num": 2,
+            "section_num":17,
+            "lat":"",
+            "long":"",
+            "semeller_books":[],
+            "dar_elnasher":[
+                {
+                "id":0,
+                "name_ar": "الرواق للنشر والتوزيع",
+                "name_en":"Al Rewaq for Publishing and Distribution",
+                "lat":"",
+                "long":"",
+                "status_en":"Most seller",
+                "status_ar":"الأكثر مبيعا",
+                "address_en":"Ramsees",
+                "address_ar":"رمسيس",
+                "area":"15 Km"
+                },
+                {
+                    "id":1,
+                    "name_ar":" مبتدأ للنشر",
+                    "name_en":" mubtada lilnashri",
+                    "lat":"",
+                    "long":"",
+                    "status_en":"most expensive",
+                    "status_ar":"الاعلي سعرا",
+                    "address_en":"Cairo",
+                    "address_ar":"القاهره",
+                    "area":"25 Km"
+                    }
+                  
+                ]
+        },
+
+        {
+            "id":7,
+            "name_En":"In the court of history",
+            "name_Ar":"التراث المسيحي الإسلامي",
+            "pages":212,
+            "price":"32.00 EGP",
+            "seller_ar":"دار الشروق",
+            "seller_en":"Dar Alshrouk",
+            "writer_ar":"ليلى تكلا",
+            "writer_en":  "Laila Takla",
+            "img":"https://assets.asfar.io/uploads/2022/03/05220806/islamic-christian-heritage-laila-takla.jpg",
+            "hull_num": 3,
+            "section_num":8,
+            "lat":"",
+            "long":"",
+            "semeller_books":[
+                {
+                    "id":0,
+                    "name_En":"When the pen speaks",
+                    "name_Ar":"عندما يتكلم القلم",
+                    "pages":300,
+                    "price":"150.00 EGP",
+                    "seller_ar":"مكتبة الأنجلو المصرية",
+                    "seller_en":"Anglo-Egyptian Library",
+                    "writer_ar":"ليلى تكلا",
+                    "writer_en":  "Laila Takla",
+                    "img":"https://assets.asfar.io/uploads/2021/04/when-the-pen-spoke.jpg",
+                    "hull_num": 2,
+                    "section_num":25,
+                    "lat":"",
+                    "long":"",
+                    "semeller_books":[],
+                    "dar_elnasher":[
+                        {
+                        "id":0,
+                        "name_ar": "دار الشروق",
+                        "name_en":"Dar Alshrouk",
+                        "lat":"",
+                        "long":"",
+                        "status_en":"Most seller",
+                        "status_ar":"الأكثر مبيعا",
+                        "address_en":"Nasr City",
+                        "address_ar":"مدينة نصر",
+                        "area":"24 Km"
+                        }
+                       
+                        ]
+                }
+             
+             ],
+             "dar_elnasher":[
+                {
+                "id":0,
+                "name_ar": "دار الشروق",
+                "name_en":"Dar Alshrouk",
+                "lat":"",
+                "long":"",
+                "status_en":"Most seller",
+                "status_ar":"الأكثر مبيعا",
+                "address_en":"Nasr City",
+                "address_ar":"مدينة نصر",
+                "area":"24 Km"
+                }
+               
+                ]
+        },
+
+        {
+            "id":8,
+            "name_En":"On the bridge",
+            "name_Ar":"على الجسر",
+            "pages":351,
+            "price":"45.00 EGP",
+            "seller_ar":"دار الشروق",
+            "seller_en":"Dar Alshrouk",
+            "writer_ar":"أسامة أنور عكاشة",
+            "writer_en":  "Osama Anwar Okasha",
+            "img":"https://assets.asfar.io/uploads/2022/03/05220551/on-the-bridge.jpg",
+            "hull_num": 4,
+            "section_num":9,
+            "lat":"",
+            "long":"",
+            "semeller_books":[
+                {
+                    "id":0,
+                    "name_En":"monsoon india low",
+                    "name_Ar":"منخفض الهند الموسمي",
+                    "pages":242,
+                    "price":"60.00 EGP",
+                    "seller_ar":"دار الشروق",
+                    "seller_en":"Dar Alshrouk",
+                    "writer_ar":"أسامة أنور عكاشة",
+                    "writer_en":  "Osama Anwar Okasha",
+                    "img":"https://assets.asfar.io/uploads/2022/02/09225102/monsoon-india-low-osama-anwar-okasha.jpeg",
+                    "hull_num": 2,
+                    "section_num":6,
+                    "lat":"",
+                    "long":"",
+                    "semeller_books":[],
+                    "dar_elnasher":[
+                        {
+                        "id":0,
+                        "name_ar": "دار الشروق",
+                        "name_en":"Dar Alshrouk",
+                        "lat":"",
+                        "long":"",
+                        "status_en":"Most seller",
+                        "status_ar":"الأكثر مبيعا",
+                        "address_en":"Nasr City",
+                        "address_ar":"مدينة نصر",
+                        "area":"24 Km"
+                        }
+                       
+                        ]
+                }
+             ],
+             "dar_elnasher":[
+                {
+                "id":0,
+                "name_ar": "دار الشروق",
+                "name_en":"Dar Alshrouk",
+                "lat":"",
+                "long":"",
+                "status_en":"Most seller",
+                "status_ar":"الأكثر مبيعا",
+                "address_en":"Nasr City",
+                "address_ar":"مدينة نصر",
+                "area":"24 Km"
+                }
+               
+                ]
+        },
+
+        {
+            "id":9,
+            "name_En":"My Mission in Israel: Memoirs of the First Egyptian Ambassador to Tel Aviv",
+            "name_Ar": "مهمتي في إسرائيل: مذكرات أول سفير مصري في تل أبيب",
+            "pages":366,
+            "price":"85.00 EGP",
+            "seller_ar":"دار الشروق",
+            "seller_en":"Dar Alshrouk",
+            "writer_ar":"سعد مرتضى",
+            "writer_en":  "Saad Mortada",
+            "img":"https://assets.asfar.io/uploads/2022/03/05220622/my-mission-in-israel.jpg",
+            "hull_num": 3,
+            "section_num":9,
+            "lat":"",
+            "long":"",
+            "semeller_books":[],
+            "dar_elnasher":[
+                {
+                "id":0,
+                "name_ar": "دار الشروق",
+                "name_en":"Dar Alshrouk",
+                "lat":"",
+                "long":"",
+                "status_en":"Most seller",
+                "status_ar":"الأكثر مبيعا",
+                "address_en":"Nasr City",
+                "address_ar":"مدينة نصر",
+                "area":"24 Km"
+                }
+               
+                ]
+        }
+    ]
+}
