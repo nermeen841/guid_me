@@ -3,7 +3,8 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:guid_me/DBhelper/AppCubit/appState.dart';
 import 'package:guid_me/DBhelper/AppCubit/cubit.dart';
-
+import 'package:guid_me/generated/locale_keys.g.dart';
+import 'package:easy_localization/easy_localization.dart';
 import 'full_image.dart';
 
 Widget buildBookDetailCard(
@@ -118,31 +119,31 @@ Widget buildBookDetailWriterCard(
               h: h,
               w: w,
               icon: Icons.person_outline,
-              title: 'Worte By: ',
+              title: '${LocaleKeys.WroteBy.tr()}: ',
               text: writerName),
           buildBookDetailWriterRow(
               h: h,
               w: w,
               icon: Icons.my_library_books,
-              title: 'Pages: ',
+              title: '${LocaleKeys.Pages.tr()}: ',
               text: pages),
           buildBookDetailWriterRow(
               h: h,
               w: w,
               icon: Icons.local_library_outlined,
-              title: 'Hull Number: ',
+              title: '${LocaleKeys.HullNumber.tr()}: ',
               text: hallNum),
           buildBookDetailWriterRow(
               h: h,
               w: w,
               icon: Icons.person_outline,
-              title: 'suite: ',
+              title: '${LocaleKeys.Suite.tr()}: ',
               text: sectionNum),
           buildBookDetailWriterRow(
               h: h,
               w: w,
               icon: Icons.public_outlined,
-              title: 'Publishing: ',
+              title: '${LocaleKeys.Publishing.tr()}: ',
               text: sellerName),
         ],
       ),
@@ -152,7 +153,7 @@ Widget buildPublishingHouseCard(
         {required double h,
         required double w,
         required String name,
-        required String area,
+        // required String area,
         required String status,
         required String address}) =>
     Container(
@@ -232,14 +233,6 @@ Widget buildPublishingHouseCard(
                         SizedBox(
                           width: w * 0.2,
                         ),
-                        Text(
-                          area,
-                          style: TextStyle(
-                              fontFamily: 'Cairo',
-                              fontWeight: FontWeight.bold,
-                              fontSize: w * 0.05,
-                              color: const Color(0xff3366cc)),
-                        )
                       ],
                     ),
                   ],
@@ -308,6 +301,7 @@ favouriteCard(
     required String writerName,
     required String image,
     required context,
+    required String lang,
     required String price,
     required int bookId}) {
   return InkWell(
@@ -334,15 +328,13 @@ favouriteCard(
             width: w * 0.27,
             decoration: BoxDecoration(
               color: Colors.grey[200],
-              borderRadius:
-                  // (lang == 'en')
-                  //     ?
-                  BorderRadius.only(
+              borderRadius: (lang == 'en')
+                  ? BorderRadius.only(
                       topLeft: Radius.circular(w * 0.05),
-                      bottomLeft: Radius.circular(w * 0.05)),
-              // : BorderRadius.only(
-              //     topRight: Radius.circular(w * 0.05),
-              //     bottomRight: Radius.circular(w * 0.05)),
+                      bottomLeft: Radius.circular(w * 0.05))
+                  : BorderRadius.only(
+                      topRight: Radius.circular(w * 0.05),
+                      bottomRight: Radius.circular(w * 0.05)),
               image: DecorationImage(
                 image: NetworkImage(image),
                 fit: BoxFit.fitHeight,
@@ -386,7 +378,7 @@ favouriteCard(
                           true) {
                         DataBaseCubit.get(context).deletaFromDB(id: bookId);
                         Fluttertoast.showToast(
-                            msg: "Book deleted from your favourite",
+                            msg: LocaleKeys.BookRemoved.tr(),
                             gravity: ToastGravity.TOP,
                             textColor: Colors.white,
                             backgroundColor: Colors.red,
@@ -401,7 +393,7 @@ favouriteCard(
                             writernameAr: "",
                             bookId: bookId);
                         Fluttertoast.showToast(
-                            msg: "Book added to your favourite",
+                            msg: LocaleKeys.BookAdded.tr(),
                             gravity: ToastGravity.TOP,
                             textColor: Colors.white,
                             backgroundColor: const Color(0xff3366cc),
@@ -429,12 +421,12 @@ favouriteCard(
                                 ? Icon(
                                     Icons.favorite,
                                     size: w * 0.05,
-                                    color: Color(0xff3366cc),
+                                    color: const Color(0xff3366cc),
                                   )
                                 : Icon(
                                     Icons.favorite_outline,
                                     size: w * 0.05,
-                                    color: Color(0xff3366cc),
+                                    color: const Color(0xff3366cc),
                                   ),
                       ),
                     ),
@@ -446,7 +438,7 @@ favouriteCard(
               // ),
               Text(
                 writerName,
-                style: TextStyle(
+                style: const TextStyle(
                     color: Colors.red,
                     fontFamily: 'Cairo',
                     fontWeight: FontWeight.w700,
@@ -454,7 +446,7 @@ favouriteCard(
               ),
               Text(
                 price,
-                style: TextStyle(fontWeight: FontWeight.bold),
+                style: const TextStyle(fontWeight: FontWeight.bold),
               ),
             ],
           ),
@@ -473,9 +465,12 @@ moreSoldCard(
     required double w,
     GestureTapCallback? onPress,
     required String bookName,
+    required String bookNameAr,
+    required String writerNameAr,
     required String writerName,
     required String price,
     required int bookId,
+    required String lang,
     required String image}) {
   return InkWell(
     onTap: onPress,
@@ -501,15 +496,13 @@ moreSoldCard(
             width: w * 0.27,
             decoration: BoxDecoration(
               color: Colors.grey[200],
-              borderRadius:
-                  // (lang == 'en')
-                  //     ?
-                  BorderRadius.only(
+              borderRadius: (lang == 'en')
+                  ? BorderRadius.only(
                       topLeft: Radius.circular(w * 0.05),
-                      bottomLeft: Radius.circular(w * 0.05)),
-              // : BorderRadius.only(
-              //     topRight: Radius.circular(w * 0.05),
-              //     bottomRight: Radius.circular(w * 0.05)),
+                      bottomLeft: Radius.circular(w * 0.05))
+                  : BorderRadius.only(
+                      topRight: Radius.circular(w * 0.05),
+                      bottomRight: Radius.circular(w * 0.05)),
               image: DecorationImage(
                 image: NetworkImage(image),
                 fit: BoxFit.cover,
@@ -537,15 +530,25 @@ moreSoldCard(
                     children: [
                       SizedBox(
                         width: w * 0.5,
-                        child: Text(
-                          bookName,
-                          overflow: TextOverflow.ellipsis,
-                          style: TextStyle(
-                            fontSize: w * 0.04,
-                            fontFamily: 'Cairo',
-                            fontWeight: FontWeight.bold,
-                          ),
-                        ),
+                        child: (lang == 'en')
+                            ? Text(
+                                bookName,
+                                overflow: TextOverflow.ellipsis,
+                                style: TextStyle(
+                                  fontSize: w * 0.04,
+                                  fontFamily: 'Cairo',
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              )
+                            : Text(
+                                bookNameAr,
+                                overflow: TextOverflow.ellipsis,
+                                style: TextStyle(
+                                  fontSize: w * 0.04,
+                                  fontFamily: 'Cairo',
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
                       ),
                       SizedBox(
                         width: w * 0.03,
@@ -560,7 +563,7 @@ moreSoldCard(
                                   DataBaseCubit.get(context)
                                       .deletaFromDB(id: bookId);
                                   Fluttertoast.showToast(
-                                      msg: "Book deleted from your favourite",
+                                      msg: LocaleKeys.BookRemoved.tr(),
                                       gravity: ToastGravity.TOP,
                                       textColor: Colors.white,
                                       backgroundColor: Colors.red,
@@ -569,13 +572,13 @@ moreSoldCard(
                                   DataBaseCubit.get(context).inserttoDatabase(
                                       booknameEn: bookName,
                                       bookImage: image,
-                                      booknameAr: "",
+                                      booknameAr: bookNameAr,
                                       writernameEn: writerName,
-                                      writernameAr: "",
+                                      writernameAr: writerNameAr,
                                       price: price,
                                       bookId: bookId);
                                   Fluttertoast.showToast(
-                                      msg: "Book added to your favourite",
+                                      msg: LocaleKeys.BookAdded.tr(),
                                       gravity: ToastGravity.TOP,
                                       textColor: Colors.white,
                                       backgroundColor: const Color(0xff3366cc),
@@ -603,12 +606,12 @@ moreSoldCard(
                                       ? Icon(
                                           Icons.favorite,
                                           size: w * 0.05,
-                                          color: Color(0xff3366cc),
+                                          color: const Color(0xff3366cc),
                                         )
                                       : Icon(
                                           Icons.favorite_outline,
                                           size: w * 0.05,
-                                          color: Color(0xff3366cc),
+                                          color: const Color(0xff3366cc),
                                         ),
                                 ),
                               ),
@@ -619,17 +622,26 @@ moreSoldCard(
                   ),
                 ],
               ),
-              Text(
-                writerName,
-                style: TextStyle(
-                    color: Colors.red,
-                    fontFamily: 'Cairo',
-                    fontWeight: FontWeight.w700,
-                    fontSize: 15),
-              ),
+              (lang == 'en')
+                  ? Text(
+                      writerName,
+                      style: const TextStyle(
+                          color: Colors.red,
+                          fontFamily: 'Cairo',
+                          fontWeight: FontWeight.w700,
+                          fontSize: 15),
+                    )
+                  : Text(
+                      writerNameAr,
+                      style: const TextStyle(
+                          color: Colors.red,
+                          fontFamily: 'Cairo',
+                          fontWeight: FontWeight.w700,
+                          fontSize: 15),
+                    ),
               Text(
                 price,
-                style: TextStyle(fontWeight: FontWeight.bold),
+                style: const TextStyle(fontWeight: FontWeight.bold),
               ),
             ],
           ),
@@ -649,7 +661,10 @@ searchCard(
     required double w,
     GestureTapCallback? onPress,
     required String bookName,
+    required String bookNameAr,
+    required String lang,
     required String writerName,
+    required String writerNameAr,
     required String price,
     required int bookId,
     required context,
@@ -678,15 +693,13 @@ searchCard(
             width: w * 0.27,
             decoration: BoxDecoration(
               color: Colors.grey[200],
-              borderRadius:
-                  // (lang == 'en')
-                  //     ?
-                  BorderRadius.only(
+              borderRadius: (lang == 'en')
+                  ? BorderRadius.only(
                       topLeft: Radius.circular(w * 0.05),
-                      bottomLeft: Radius.circular(w * 0.05)),
-              // : BorderRadius.only(
-              //     topRight: Radius.circular(w * 0.05),
-              //     bottomRight: Radius.circular(w * 0.05)),
+                      bottomLeft: Radius.circular(w * 0.05))
+                  : BorderRadius.only(
+                      topRight: Radius.circular(w * 0.05),
+                      bottomRight: Radius.circular(w * 0.05)),
               image: DecorationImage(
                 image: NetworkImage(image),
                 fit: BoxFit.cover,
@@ -714,15 +727,25 @@ searchCard(
                     children: [
                       SizedBox(
                         width: w * 0.5,
-                        child: Text(
-                          bookName,
-                          overflow: TextOverflow.ellipsis,
-                          style: TextStyle(
-                            fontSize: w * 0.04,
-                            fontFamily: 'Cairo',
-                            fontWeight: FontWeight.bold,
-                          ),
-                        ),
+                        child: (lang == 'en')
+                            ? Text(
+                                bookName,
+                                overflow: TextOverflow.ellipsis,
+                                style: TextStyle(
+                                  fontSize: w * 0.04,
+                                  fontFamily: 'Cairo',
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              )
+                            : Text(
+                                bookNameAr,
+                                overflow: TextOverflow.ellipsis,
+                                style: TextStyle(
+                                  fontSize: w * 0.04,
+                                  fontFamily: 'Cairo',
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
                       ),
                       SizedBox(
                         width: w * 0.03,
@@ -736,7 +759,7 @@ searchCard(
                                     DataBaseCubit.get(context)
                                         .deletaFromDB(id: bookId);
                                     Fluttertoast.showToast(
-                                        msg: "Book deleted from your favourite",
+                                        msg: LocaleKeys.BookRemoved.tr(),
                                         gravity: ToastGravity.TOP,
                                         textColor: Colors.black,
                                         backgroundColor: Colors.red,
@@ -745,13 +768,13 @@ searchCard(
                                     DataBaseCubit.get(context).inserttoDatabase(
                                         booknameEn: bookName,
                                         bookImage: image,
-                                        booknameAr: "",
+                                        booknameAr: bookNameAr,
                                         writernameEn: writerName,
                                         price: price,
-                                        writernameAr: "",
+                                        writernameAr: writerNameAr,
                                         bookId: bookId);
                                     Fluttertoast.showToast(
-                                        msg: "Book added to your favourite",
+                                        msg: LocaleKeys.BookAdded.tr(),
                                         gravity: ToastGravity.TOP,
                                         textColor: Colors.white,
                                         backgroundColor:
@@ -795,14 +818,23 @@ searchCard(
                   ),
                 ],
               ),
-              Text(
-                writerName,
-                style: const TextStyle(
-                    color: Colors.red,
-                    fontFamily: 'Cairo',
-                    fontWeight: FontWeight.w700,
-                    fontSize: 15),
-              ),
+              (lang == 'en')
+                  ? Text(
+                      writerName,
+                      style: const TextStyle(
+                          color: Colors.red,
+                          fontFamily: 'Cairo',
+                          fontWeight: FontWeight.w700,
+                          fontSize: 15),
+                    )
+                  : Text(
+                      writerNameAr,
+                      style: const TextStyle(
+                          color: Colors.red,
+                          fontFamily: 'Cairo',
+                          fontWeight: FontWeight.w700,
+                          fontSize: 15),
+                    ),
               Text(
                 price,
                 style: const TextStyle(fontWeight: FontWeight.bold),

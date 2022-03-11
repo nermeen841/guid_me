@@ -22,8 +22,8 @@
                 "id":0,
                 "name_ar": " دار الشروق",
                 "name_en":"Dar Elshrouk",
-                "lat":"",
-                "long":"",
+                "lat":"30.0147179",
+                "long":"31.3819350",
                 "status_en":"Most seller",
                 "status_ar":"الأكثر مبيعا",
                 "address_en":"Cairo",
@@ -34,8 +34,8 @@
                     "id":1,
                     "name_ar":"دار الرسم",
                     "name_en":"Dar Elrasm",
-                    "lat":"",
-                    "long":"",
+                    "lat":"30.0145059",
+                    "long":"31.3818844",
                     "status_en":"most expensive",
                     "status_ar":"الاعلي سعرا",
                     "address_en":"Mansoura",
@@ -46,8 +46,8 @@
                         "id":2,
                         "name_ar": "اوتو ميديا",
                         "name_en":"Auto Media",
-                        "lat":"",
-                        "long":"",
+                        "lat":"30.0144955",
+                        "long":"31.3818874",
                         "status_en":"closest to you",
                         "status_ar": "الاقرب لك",
                         "address_en":"6 October",
@@ -55,6 +55,7 @@
                         "area":"25 Km"
                         }
                 ]
+         
             
             
         },
@@ -80,8 +81,8 @@
                 "id":0,
                 "name_ar": " الكرمة للنشر",
                 "name_en":"Karma Publishing",
-                "lat":"",
-                "long":"",
+                "lat":"30.0145027",
+                "long":"31.3818119",
                 "status_en":"Most seller",
                 "status_ar":"الأكثر مبيعا",
                 "address_en":"ElNozha",
@@ -92,8 +93,8 @@
                     "id":1,
                     "name_ar":"دارالفكر الجامعي",
                     "name_en":"University House of Thought",
-                    "lat":"",
-                    "long":"",
+                    "lat":"30.0144961",
+                    "long":"31.3818656",
                     "status_en":"most expensive",
                     "status_ar":"الاعلي سعرا",
                     "address_en":"Alexandria",
@@ -104,8 +105,8 @@
                         "id":2,
                         "name_ar": "دار الاخوه للنشر",
                         "name_en":"Brothers Publishing House",
-                        "lat":"",
-                        "long":"",
+                        "lat":"30.0144900",
+                        "long":"31.3818012",
                         "status_en":"closest to you",
                         "status_ar": "الاقرب لك",
                         "address_en":"Shobra",
@@ -113,8 +114,6 @@
                         "area":"20 Km"
                         }
                 ]
-            
-            
         },
     
         {
@@ -154,8 +153,8 @@
                         "id":0,
                         "name_ar": "دار دوّن",
                         "name_en":"home don",
-                        "lat":"",
-                        "long":"",
+                        "lat":"30.0145309",
+                        "long":"31.3818415",
                         "status_en":"Most seller",
                         "status_ar":"الأكثر مبيعا",
                         "address_en":"mokatam",
@@ -166,8 +165,8 @@
                             "id":1,
                             "name_ar":"الدوليه للكتب العلميه",
                             "name_en":"International Scientific Books",
-                            "lat":"",
-                            "long":"",
+                            "lat":"30.0144775",
+                            "long":"31.3817989",
                             "status_en":"most expensive",
                             "status_ar":"الاعلي سعرا",
                             "address_en":"Nasr city",
@@ -178,8 +177,8 @@
                                 "id":2,
                                 "name_ar": "زين للنشر و التوزيع",
                                 "name_en":"Zein for Publishing ",
-                                "lat":"",
-                                "long":"",
+                                "lat":"30.0144816",
+                                "long":"31.3818160",
                                 "status_en":"farthest away from you",
                                 "status_ar": "الابعد لك",
                                 "address_en":"Alexandria",
@@ -197,8 +196,8 @@
                 "id":0,
                 "name_ar": "دار دوّن",
                 "name_en":"home don",
-                "lat":"",
-                "long":"",
+                "lat":"30.0145309",
+                "long":"31.3818415",
                 "status_en":"Most seller",
                 "status_ar":"الأكثر مبيعا",
                 "address_en":"mokatam",
@@ -209,8 +208,8 @@
                     "id":1,
                     "name_ar":"الدوليه للكتب العلميه",
                     "name_en":"International Scientific Books",
-                    "lat":"",
-                    "long":"",
+                    "lat":"30.0144775",
+                    "long":"31.3817989",
                     "status_en":"most expensive",
                     "status_ar":"الاعلي سعرا",
                     "address_en":"Nasr city",
@@ -221,8 +220,8 @@
                         "id":2,
                         "name_ar": "زين للنشر و التوزيع",
                         "name_en":"Zein for Publishing ",
-                        "lat":"",
-                        "long":"",
+                        "lat":"30.0144816",
+                        "long":"31.3818160",
                         "status_en":"farthest away from you",
                         "status_ar": "الابعد لك",
                         "address_en":"Alexandria",
@@ -271,8 +270,8 @@
                         "id":0,
                         "name_ar": "دار دوّن",
                         "name_en":"home don",
-                        "lat":"",
-                        "long":"",
+                        "lat":"30.0145309",
+                        "long":"31.3818415",
                         "status_en":"Most seller",
                         "status_ar":"الأكثر مبيعا",
                         "address_en":"mokatam",
@@ -283,8 +282,8 @@
                             "id":1,
                             "name_ar":"ميريت",
                             "name_en":"Meret",
-                            "lat":"",
-                            "long":"",
+                            "lat":"30.0145094",
+                            "long":"31.3818207",
                             "status_en":"most expensive",
                             "status_ar":"الاعلي سعرا",
                             "address_en":"Kasr Elnil",
@@ -315,8 +314,8 @@
                         "id":0,
                         "name_ar": "دار دوّن",
                         "name_en":"home don",
-                        "lat":"",
-                        "long":"",
+                        "lat":"30.0145309",
+                        "long":"31.3818415",
                         "status_en":"Most seller",
                         "status_ar":"الأكثر مبيعا",
                         "address_en":"mokatam",
@@ -327,8 +326,8 @@
                             "id":1,
                             "name_ar":"ميريت",
                             "name_en":"Meret",
-                            "lat":"",
-                            "long":"",
+                            "lat":"30.0145094",
+                            "long":"31.3818207",
                             "status_en":"most expensive",
                             "status_ar":"الاعلي سعرا",
                             "address_en":"Kasr Elnil",
@@ -359,8 +358,8 @@
                         "id":0,
                         "name_ar": "دار دوّن",
                         "name_en":"home don",
-                        "lat":"",
-                        "long":"",
+                        "lat":"30.0145309",
+                        "long":"31.3818415",
                         "status_en":"Most seller",
                         "status_ar":"الأكثر مبيعا",
                         "address_en":"mokatam",
@@ -371,8 +370,8 @@
                             "id":1,
                             "name_ar":"ميريت",
                             "name_en":"Meret",
-                            "lat":"",
-                            "long":"",
+                            "lat":"30.0145094",
+                            "long":"31.3818207",
                             "status_en":"most expensive",
                             "status_ar":"الاعلي سعرا",
                             "address_en":"Kasr Elnil",
@@ -389,8 +388,8 @@
                 "id":0,
                 "name_ar": "دار دوّن",
                 "name_en":"home don",
-                "lat":"",
-                "long":"",
+                "lat":"30.0145309",
+                "long":"31.3818415",
                 "status_en":"Most seller",
                 "status_ar":"الأكثر مبيعا",
                 "address_en":"mokatam",
@@ -401,8 +400,8 @@
                     "id":1,
                     "name_ar":"ميريت",
                     "name_en":"Meret",
-                    "lat":"",
-                    "long":"",
+                    "lat":"30.0145094",
+                    "long":"31.3818207",
                     "status_en":"most expensive",
                     "status_ar":"الاعلي سعرا",
                     "address_en":"Kasr Elnil",
@@ -437,8 +436,8 @@
                 "id":0,
                 "name_ar": "الرواق للنشر والتوزيع",
                 "name_en":"Al Rewaq for Publishing and Distribution",
-                "lat":"",
-                "long":"",
+                "lat":"30.0144862",
+                "long":"31.3817979",
                 "status_en":"Most seller",
                 "status_ar":"الأكثر مبيعا",
                 "address_en":"Ramseess",
@@ -488,27 +487,15 @@
                         "id":0,
                         "name_ar": "الرواق للنشر والتوزيع",
                         "name_en":"Al Rewaq for Publishing and Distribution",
-                        "lat":"",
-                        "long":"",
+                        "lat":"30.0144862",
+                        "long":"31.3817979",
                         "status_en":"Most seller",
                         "status_ar":"الأكثر مبيعا",
                         "address_en":"Ramsees",
                         "address_ar":"رمسيس",
                         "area":"15 Km"
-                        },
-                        {
-                            "id":1,
-                            "name_ar":" مبتدأ للنشر",
-                            "name_en":" mubtada lilnashri",
-                            "lat":"",
-                            "long":"",
-                            "status_en":"most expensive",
-                            "status_ar":"الاعلي سعرا",
-                            "address_en":"Cairo",
-                            "address_ar":"القاهره",
-                            "area":"25 Km"
-                            }
-                          
+                        }
+                       
                         ]
                 },  
                 {
@@ -532,27 +519,15 @@
                         "id":0,
                         "name_ar": "الرواق للنشر والتوزيع",
                         "name_en":"Al Rewaq for Publishing and Distribution",
-                        "lat":"",
-                        "long":"",
+                        "lat":"30.0144862",
+                        "long":"31.3817979",
                         "status_en":"Most seller",
                         "status_ar":"الأكثر مبيعا",
                         "address_en":"Ramsees",
                         "address_ar":"رمسيس",
                         "area":"15 Km"
-                        },
-                        {
-                            "id":1,
-                            "name_ar":" مبتدأ للنشر",
-                            "name_en":" mubtada lilnashri",
-                            "lat":"",
-                            "long":"",
-                            "status_en":"most expensive",
-                            "status_ar":"الاعلي سعرا",
-                            "address_en":"Cairo",
-                            "address_ar":"القاهره",
-                            "area":"25 Km"
-                            }
-                          
+                        }
+                       
                         ]
                 },
                 {
@@ -576,27 +551,15 @@
                         "id":0,
                         "name_ar": "الرواق للنشر والتوزيع",
                         "name_en":"Al Rewaq for Publishing and Distribution",
-                        "lat":"",
-                        "long":"",
+                        "lat":"30.0144862",
+                        "long":"31.3817979",
                         "status_en":"Most seller",
                         "status_ar":"الأكثر مبيعا",
                         "address_en":"Ramsees",
                         "address_ar":"رمسيس",
                         "area":"15 Km"
-                        },
-                        {
-                            "id":1,
-                            "name_ar":" مبتدأ للنشر",
-                            "name_en":" mubtada lilnashri",
-                            "lat":"",
-                            "long":"",
-                            "status_en":"most expensive",
-                            "status_ar":"الاعلي سعرا",
-                            "address_en":"Cairo",
-                            "address_ar":"القاهره",
-                            "area":"25 Km"
-                            }
-                          
+                        }
+                       
                         ]
                 },
                 {
@@ -620,27 +583,15 @@
                         "id":0,
                         "name_ar": "الرواق للنشر والتوزيع",
                         "name_en":"Al Rewaq for Publishing and Distribution",
-                        "lat":"",
-                        "long":"",
+                        "lat":"30.0144862",
+                        "long":"31.3817979",
                         "status_en":"Most seller",
                         "status_ar":"الأكثر مبيعا",
                         "address_en":"Ramsees",
                         "address_ar":"رمسيس",
                         "area":"15 Km"
-                        },
-                        {
-                            "id":1,
-                            "name_ar":" مبتدأ للنشر",
-                            "name_en":" mubtada lilnashri",
-                            "lat":"",
-                            "long":"",
-                            "status_en":"most expensive",
-                            "status_ar":"الاعلي سعرا",
-                            "address_en":"Cairo",
-                            "address_ar":"القاهره",
-                            "area":"25 Km"
-                            }
-                          
+                        }
+                       
                         ]
                 }
                 
@@ -650,29 +601,16 @@
                 "id":0,
                 "name_ar": "الرواق للنشر والتوزيع",
                 "name_en":"Al Rewaq for Publishing and Distribution",
-                "lat":"",
-                "long":"",
+                "lat":"30.0144862",
+                "long":"31.3817979",
                 "status_en":"Most seller",
                 "status_ar":"الأكثر مبيعا",
                 "address_en":"Ramsees",
                 "address_ar":"رمسيس",
                 "area":"15 Km"
-                },
-                {
-                    "id":1,
-                    "name_ar":" مبتدأ للنشر",
-                    "name_en":" mubtada lilnashri",
-                    "lat":"",
-                    "long":"",
-                    "status_en":"most expensive",
-                    "status_ar":"الاعلي سعرا",
-                    "address_en":"Cairo",
-                    "address_ar":"القاهره",
-                    "area":"25 Km"
-                    }
-                  
+                }
+               
                 ]
-            
             
         },
 
@@ -696,29 +634,17 @@
             "dar_elnasher":[
                 {
                 "id":0,
-                "name_ar": "الرواق للنشر والتوزيع",
-                "name_en":"Al Rewaq for Publishing and Distribution",
-                "lat":"",
-                "long":"",
+                "name_ar": "دار الشروق",
+                "name_en":"Dar Alshrouk",
+                "lat":"30.0147179",
+                "long":"31.3819350",
                 "status_en":"Most seller",
                 "status_ar":"الأكثر مبيعا",
-                "address_en":"Ramsees",
-                "address_ar":"رمسيس",
-                "area":"15 Km"
-                },
-                {
-                    "id":1,
-                    "name_ar":" مبتدأ للنشر",
-                    "name_en":" mubtada lilnashri",
-                    "lat":"",
-                    "long":"",
-                    "status_en":"most expensive",
-                    "status_ar":"الاعلي سعرا",
-                    "address_en":"Cairo",
-                    "address_ar":"القاهره",
-                    "area":"25 Km"
-                    }
-                  
+                "address_en":"Nasr City",
+                "address_ar":"مدينة نصر",
+                "area":"24 Km"
+                }
+               
                 ]
         },
 
@@ -759,14 +685,26 @@
                         "id":0,
                         "name_ar": "دار الشروق",
                         "name_en":"Dar Alshrouk",
-                        "lat":"",
-                        "long":"",
+                        "lat":"30.0147179",
+                        "long":"31.3819350",
                         "status_en":"Most seller",
                         "status_ar":"الأكثر مبيعا",
                         "address_en":"Nasr City",
                         "address_ar":"مدينة نصر",
                         "area":"24 Km"
-                        }
+                        },
+                        {
+                            "id":1,
+                            "name_ar": "شركة ناس",
+                            "name_en":"Nas Company ",
+                            "lat":"30.0144612",
+                            "long":"31.3818274",
+                            "status_en":"closest to you",
+                            "status_ar":"الاقرب لك",
+                            "address_en":"Cairo",
+                            "address_ar":"القاهرة",
+                            "area":"30 Km"
+                            }
                        
                         ]
                 }
@@ -777,14 +715,26 @@
                 "id":0,
                 "name_ar": "دار الشروق",
                 "name_en":"Dar Alshrouk",
-                "lat":"",
-                "long":"",
+                "lat":"30.0147179",
+                "long":"31.3819350",
                 "status_en":"Most seller",
                 "status_ar":"الأكثر مبيعا",
                 "address_en":"Nasr City",
                 "address_ar":"مدينة نصر",
                 "area":"24 Km"
-                }
+                },
+                {
+                    "id":1,
+                    "name_ar": "شركة ناس",
+                    "name_en":"Nas Company ",
+                    "lat":"30.0144612",
+                    "long":"31.3818274",
+                    "status_en":"closest to you",
+                    "status_ar":"الاقرب لك",
+                    "address_en":"Cairo",
+                    "address_ar":"القاهرة",
+                    "area":"30 Km"
+                    }
                
                 ]
         },
@@ -826,14 +776,15 @@
                         "id":0,
                         "name_ar": "دار الشروق",
                         "name_en":"Dar Alshrouk",
-                        "lat":"",
-                        "long":"",
+                        "lat":"30.0147179",
+                        "long":"31.3819350",
                         "status_en":"Most seller",
                         "status_ar":"الأكثر مبيعا",
                         "address_en":"Nasr City",
                         "address_ar":"مدينة نصر",
                         "area":"24 Km"
                         }
+                       
                        
                         ]
                 }
@@ -843,14 +794,15 @@
                 "id":0,
                 "name_ar": "دار الشروق",
                 "name_en":"Dar Alshrouk",
-                "lat":"",
-                "long":"",
+                "lat":"30.0147179",
+                "long":"31.3819350",
                 "status_en":"Most seller",
                 "status_ar":"الأكثر مبيعا",
                 "address_en":"Nasr City",
                 "address_ar":"مدينة نصر",
                 "area":"24 Km"
                 }
+               
                
                 ]
         },
@@ -876,15 +828,14 @@
                 "id":0,
                 "name_ar": "دار الشروق",
                 "name_en":"Dar Alshrouk",
-                "lat":"",
-                "long":"",
+                "lat":"30.0147179",
+                "long":"31.3819350",
                 "status_en":"Most seller",
                 "status_ar":"الأكثر مبيعا",
                 "address_en":"Nasr City",
                 "address_ar":"مدينة نصر",
                 "area":"24 Km"
                 }
-               
                 ]
         }
     ]

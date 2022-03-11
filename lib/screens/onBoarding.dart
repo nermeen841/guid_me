@@ -1,10 +1,9 @@
+// ignore_for_file: file_names, use_key_in_widget_constructors
+
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import 'home_screen.dart';
-// import 'package:travel/constants/constants.dart';
-// import 'package:travel/presentation/screens/authentication/login_or_signup/login_or_signUp_screen.dart';
-// import 'package:travel/presentation/widgets/onBoarding_content/onBoarding_content.dart';
 
 class OnBoardingScreen extends StatefulWidget {
   @override
@@ -13,17 +12,19 @@ class OnBoardingScreen extends StatefulWidget {
 
 class _OnBoardingScreenState extends State<OnBoardingScreen> {
   int currentPage = 0;
-  // bool isLast = false;
 
   List<Map<String, String>> splashData = [
+    {
+      "text":
+          "GUIED ME is your fastest way ever \n to find your favorite books",
+      "image": "assets/images/onboearding.png"
+    },
     {"text": 'Reading Is Life', "image": "assets/images/13258.jpg"},
-    {"text": 'Know New Information', "image": "assets/images/people-team.png"},
+    {"text": 'Know New Information', "image": "assets/images/Library.jpg"},
     {
       "text": 'Feed Your Brain',
       "image": "assets/images/knowledgeeducation.png"
     },
-    // {"text": 'Improve Yourself', "image": "assets/images/page2 (2).jpg"},
-    // {"text": 'Spend Time Developing', "image": "assets/images/page3.jpg"},
   ];
   @override
   Widget build(BuildContext context) {
@@ -32,7 +33,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
 
     return Scaffold(
       backgroundColor: Colors.white,
-      body: Container(
+      body: SizedBox(
         width: double.infinity,
         height: h * 0.8,
         child: Column(
@@ -43,7 +44,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
             Expanded(
               flex: 3,
               child: PageView.builder(
-                physics: BouncingScrollPhysics(),
+                physics: const BouncingScrollPhysics(),
                 onPageChanged: (value) {
                   setState(() {
                     currentPage = value;
@@ -76,18 +77,20 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                   SharedPreferences prefs =
                       await SharedPreferences.getInstance();
                   prefs.setBool('is_onboearding', true);
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => HomeScreen()));
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const HomeScreen()));
                 },
                 fontSize: w * 0.05,
                 height: h * 0.07,
                 width: w * 0.5,
-                color: Color(0xff3366cc),
+                color: const Color(0xff3366cc),
                 boxShadow: [
                   BoxShadow(
                     color: Colors.grey.shade500,
                     blurRadius: 5,
-                    offset: Offset(0, 5), // Shadow position
+                    offset: const Offset(0, 5), // Shadow position
                   ),
                 ]),
           ],
@@ -109,6 +112,8 @@ class SplashContent extends StatelessWidget {
     double w = MediaQuery.of(context).size.width;
 
     return Column(
+      crossAxisAlignment: CrossAxisAlignment.center,
+      mainAxisAlignment: MainAxisAlignment.center,
       children: <Widget>[
         Image.asset(
           image,
@@ -116,10 +121,20 @@ class SplashContent extends StatelessWidget {
           width: w * 1,
           fit: BoxFit.cover,
         ),
-        Text(
-          text,
-          style: TextStyle(
-              fontSize: 25, fontWeight: FontWeight.bold, color: Colors.black87),
+        SizedBox(
+          height: h * 0.02,
+        ),
+        SizedBox(
+          width: w * 0.8,
+          child: Text(
+            text,
+            maxLines: 2,
+            textAlign: TextAlign.center,
+            style: TextStyle(
+                fontSize: w * 0.05,
+                fontWeight: FontWeight.w600,
+                color: Colors.black87),
+          ),
         ),
       ],
     );
@@ -132,12 +147,13 @@ AnimatedContainer buildOnBoardingDot(
   double w = MediaQuery.of(context).size.width;
 
   return AnimatedContainer(
-    duration: Duration(milliseconds: 250),
+    duration: const Duration(milliseconds: 250),
     margin: EdgeInsets.only(right: w * 0.03),
     height: 5,
     width: currentPage == index ? w * 0.06 : w * 0.03,
     decoration: BoxDecoration(
-      color: currentPage == index ? Color(0xff3366cc) : Colors.grey.shade400,
+      color:
+          currentPage == index ? const Color(0xff3366cc) : Colors.grey.shade400,
       borderRadius: BorderRadius.circular(30),
     ),
   );
@@ -172,7 +188,7 @@ Widget defaultButton({
           style: TextStyle(
               color: textColor,
               fontSize: fontSize,
-              fontFamily: 'Poppins',
+              fontFamily: 'Cairo',
               fontWeight: FontWeight.w700),
         ),
       ),

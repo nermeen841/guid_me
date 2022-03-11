@@ -1,0 +1,18 @@
+{
+    "Search":"بحث",
+    "BestSeller": "الاكثر مبيعا",
+    "Favourites":"المفضلة",
+    "SETTINGS":"الاعدادات",
+    "BookDetail": "تفاصيل الكتاب",
+    "WroteBy":"بقلم",
+    "BookAdded":"تم اضافة الكتاب للمفضلة",
+    "BookRemoved":"تم ازالة الكتاب من المفضلة",
+    "Pages":"الصفحات",
+    "NoResult":"لايوجد نتائج لبحثك",
+    "HullNumber":"القاعة",
+    "Suite":"الجناح",
+    "Publishing":"النشر",
+    "NearBy":"دار النشر الاقرب",
+    "SimilarBook":"كتب مشابهة",
+    "add_favourite":  "اضف كتب للمفضلة"
+}

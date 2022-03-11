@@ -1,0 +1,18 @@
+{
+    "Search":"Search",
+    "BestSeller": "Best Seller",
+    "BookDetail": "Book Detail",
+    "Favourites":"Favourites",
+    "SETTINGS":"SETTINGS",
+    "WroteBy":"Wrote By",
+    "Pages":"Pages",
+    "HullNumber":"Hull Number",
+    "BookAdded":"Book added to your favourite",
+    "BookRemoved":"Book deleted from your favourite",
+    "Suite":"Suite",
+    "NoResult":"No result found for your search",
+    "Publishing":"Publishing",
+    "NearBy":"Nearby Publishing House",
+    "SimilarBook":"Similar Book",
+    "add_favourite":  "Add books to your favourite"
+}

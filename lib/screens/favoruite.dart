@@ -1,10 +1,11 @@
 // ignore_for_file: use_key_in_widget_constructors
-
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:guid_me/DBhelper/AppCubit/appState.dart';
 import 'package:guid_me/DBhelper/AppCubit/cubit.dart';
-import 'book_detail.dart';
+import 'package:guid_me/generated/locale_keys.g.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import 'component.dart';
 
 class FavouriteScreen extends StatefulWidget {
@@ -13,6 +14,21 @@ class FavouriteScreen extends StatefulWidget {
 }
 
 class _FavouriteScreenState extends State<FavouriteScreen> {
+  String? lang;
+  getLanguage() async {
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+    final String language = prefs.getString('lang') ?? 'en';
+    setState(() {
+      lang = language;
+    });
+  }
+
+  @override
+  void initState() {
+    getLanguage();
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
     double h = MediaQuery.of(context).size.height;
@@ -25,7 +41,7 @@ class _FavouriteScreenState extends State<FavouriteScreen> {
         automaticallyImplyLeading: false,
         elevation: 0.0,
         title: Text(
-          ' Favourite',
+          LocaleKeys.Favourites.tr(),
           style: TextStyle(
               fontSize: w * 0.05,
               fontWeight: FontWeight.bold,
@@ -61,15 +77,22 @@ class _FavouriteScreenState extends State<FavouriteScreen> {
                             return favouriteCard(
                               w: w,
                               h: h,
+                              lang: lang.toString(),
                               context: context,
                               bookId: DataBaseCubit.get(context)
                                   .favourites[index]['bookID'],
-                              bookName: DataBaseCubit.get(context)
-                                  .favourites[index]['bookNameEn'],
+                              bookName: (lang == 'en')
+                                  ? DataBaseCubit.get(context).favourites[index]
+                                      ['bookNameEn']
+                                  : DataBaseCubit.get(context).favourites[index]
+                                      ['bookNameAr'],
                               image: DataBaseCubit.get(context)
                                   .favourites[index]['bookImage'],
-                              writerName: DataBaseCubit.get(context)
-                                  .favourites[index]['writerNameEn'],
+                              writerName: (lang == 'en')
+                                  ? DataBaseCubit.get(context).favourites[index]
+                                      ['writerNameEn']
+                                  : DataBaseCubit.get(context).favourites[index]
+                                      ['writerNameAr'],
                               onPress: () {},
                               price: DataBaseCubit.get(context)
                                   .favourites[index]['bookPrice'],
@@ -98,7 +121,7 @@ class _FavouriteScreenState extends State<FavouriteScreen> {
                               height: h * 0.02,
                             ),
                             Text(
-                              "Add books to your favourite",
+                              LocaleKeys.ADD_FAVOURITE.tr(),
                               textAlign: TextAlign.center,
                               style: TextStyle(
                                   color: const Color(0xff3366cc),

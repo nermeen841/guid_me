@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
-
+import 'package:guid_me/generated/locale_keys.g.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import '../book_detail.dart';
 import '../component.dart';
+import 'package:easy_localization/easy_localization.dart';
 
 class SearchResultScreen extends StatefulWidget {
   final List searchData;
@@ -13,6 +15,21 @@ class SearchResultScreen extends StatefulWidget {
 }
 
 class _SearchResultScreenState extends State<SearchResultScreen> {
+  String? lang;
+  getLanguage() async {
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+    final String language = prefs.getString('lang') ?? 'en';
+    setState(() {
+      lang = language;
+    });
+  }
+
+  @override
+  void initState() {
+    getLanguage();
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
     var h = MediaQuery.of(context).size.height;
@@ -29,10 +46,13 @@ class _SearchResultScreenState extends State<SearchResultScreen> {
                 return searchCard(
                     w: w,
                     h: h,
+                    lang: lang.toString(),
                     context: context,
                     bookName: widget.searchData[index].nameEn.toString(),
+                    bookNameAr: widget.searchData[index].nameAr.toString(),
                     bookId: widget.searchData[index].id,
                     writerName: widget.searchData[index].writerEn.toString(),
+                    writerNameAr: widget.searchData[index].writerAr.toString(),
                     image: widget.searchData[index].img.toString(),
                     price: widget.searchData[index].price.toString(),
                     onPress: () => Navigator.push(
@@ -57,7 +77,7 @@ class _SearchResultScreenState extends State<SearchResultScreen> {
                   fit: BoxFit.contain,
                 ),
                 Text(
-                  "no result found for your search",
+                  LocaleKeys.NoResult.tr(),
                   style: TextStyle(
                     fontFamily: 'Cairo',
                     fontSize: w * 0.05,

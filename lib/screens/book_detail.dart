@@ -6,8 +6,11 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:guid_me/DBhelper/AppCubit/appState.dart';
 import 'package:guid_me/DBhelper/AppCubit/cubit.dart';
-
+import 'package:guid_me/generated/locale_keys.g.dart';
+import 'package:guid_me/screens/map/map_track.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import 'component.dart';
+import 'package:easy_localization/easy_localization.dart';
 
 class BookDetailScreen extends StatefulWidget {
   dynamic details;
@@ -17,6 +20,21 @@ class BookDetailScreen extends StatefulWidget {
 }
 
 class _BookDetailScreenState extends State<BookDetailScreen> {
+  String? lang;
+  getLanguage() async {
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+    final String language = prefs.getString('lang') ?? 'en';
+    setState(() {
+      lang = language;
+    });
+  }
+
+  @override
+  void initState() {
+    getLanguage();
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
     double h = MediaQuery.of(context).size.height;
@@ -29,7 +47,7 @@ class _BookDetailScreenState extends State<BookDetailScreen> {
         automaticallyImplyLeading: false,
         elevation: 0.0,
         title: Text(
-          'Book Detail',
+          LocaleKeys.BookDetail.tr(),
           style: TextStyle(
             fontSize: w * 0.05,
             fontWeight: FontWeight.bold,
@@ -59,12 +77,15 @@ class _BookDetailScreenState extends State<BookDetailScreen> {
                   h: h,
                   w: w,
                   context: context,
-                  bookname: widget.details.nameEn.toString(),
+                  bookname: (lang == 'en')
+                      ? widget.details.nameEn.toString()
+                      : widget.details.nameAr.toString(),
                   bookId: widget.details.id,
                   price: widget.details.price.toString(),
                   image: widget.details.img.toString()),
               Align(
-                alignment: Alignment.topLeft,
+                alignment:
+                    (lang == 'en') ? Alignment.topLeft : Alignment.topRight,
                 child: BlocConsumer<DataBaseCubit, AppCubitStates>(
                     builder: (context, state) => Padding(
                           padding:
@@ -77,9 +98,9 @@ class _BookDetailScreenState extends State<BookDetailScreen> {
                                 DataBaseCubit.get(context)
                                     .deletaFromDB(id: widget.details.id);
                                 Fluttertoast.showToast(
-                                    msg: "Book deleted from your favourite",
+                                    msg: LocaleKeys.BookRemoved.tr(),
                                     gravity: ToastGravity.TOP,
-                                    textColor: Colors.black,
+                                    textColor: Colors.white,
                                     backgroundColor: Colors.red,
                                     toastLength: Toast.LENGTH_LONG);
                               } else {
@@ -92,7 +113,7 @@ class _BookDetailScreenState extends State<BookDetailScreen> {
                                     writernameAr: widget.details.writerAr,
                                     bookId: widget.details.id);
                                 Fluttertoast.showToast(
-                                    msg: "Book added to your favourite",
+                                    msg: LocaleKeys.BookAdded.tr(),
                                     gravity: ToastGravity.TOP,
                                     textColor: Colors.white,
                                     backgroundColor: const Color(0xff3366cc),
@@ -132,19 +153,24 @@ class _BookDetailScreenState extends State<BookDetailScreen> {
             height: h * 0.01,
           ),
           buildBookDetailWriterCard(
-              w: w,
-              h: h,
-              hallNum: widget.details.hullNum.toString(),
-              pages: widget.details.pages.toString(),
-              sectionNum: widget.details.sectionNum.toString(),
-              sellerName: widget.details.sellerEn.toString(),
-              writerName: widget.details.writerEn.toString()),
+            w: w,
+            h: h,
+            hallNum: widget.details.hullNum.toString(),
+            pages: widget.details.pages.toString(),
+            sectionNum: widget.details.sectionNum.toString(),
+            sellerName: (lang == 'en')
+                ? widget.details.sellerEn.toString()
+                : widget.details.sellerAr.toString(),
+            writerName: (lang == 'en')
+                ? widget.details.writerEn.toString()
+                : widget.details.writerAr.toString(),
+          ),
           SizedBox(
             height: h * 0.02,
           ),
           Center(
             child: Text(
-              'Nearby Publishing House',
+              LocaleKeys.NearBy.tr(),
               style: TextStyle(
                   color: const Color(0xff3366cc),
                   fontSize: w * 0.06,
@@ -158,13 +184,37 @@ class _BookDetailScreenState extends State<BookDetailScreen> {
           ListView.separated(
               primary: false,
               shrinkWrap: true,
-              itemBuilder: (context, index) => buildPublishingHouseCard(
-                  w: w,
-                  h: h,
-                  address: widget.details.darElnasher[index].addressEn,
-                  area: widget.details.darElnasher[index].area,
-                  status: widget.details.darElnasher[index].statusEn,
-                  name: widget.details.darElnasher[index].nameEn),
+              itemBuilder: (context, index) => InkWell(
+                    onTap: () => Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => MapTrackScreen(
+                          latitude: widget.details.darElnasher[index].lat,
+                          logtitude: widget.details.darElnasher[index].long,
+                          name: (lang == 'en')
+                              ? widget.details.darElnasher[index].nameEn
+                              : widget.details.darElnasher[index].nameAr,
+                          city: (lang == 'en')
+                              ? widget.details.darElnasher[index].addressEn
+                              : widget.details.darElnasher[index].addressAr,
+                        ),
+                      ),
+                    ),
+                    child: buildPublishingHouseCard(
+                      w: w,
+                      h: h,
+                      address: (lang == 'en')
+                          ? widget.details.darElnasher[index].addressEn
+                          : widget.details.darElnasher[index].addressAr,
+                      // area: widget.details.darElnasher[index].area,
+                      status: (lang == 'en')
+                          ? widget.details.darElnasher[index].statusEn
+                          : widget.details.darElnasher[index].statusAr,
+                      name: (lang == 'en')
+                          ? widget.details.darElnasher[index].nameEn
+                          : widget.details.darElnasher[index].nameAr,
+                    ),
+                  ),
               separatorBuilder: (context, index) => SizedBox(
                     height: h * 0.025,
                   ),
@@ -183,7 +233,7 @@ class _BookDetailScreenState extends State<BookDetailScreen> {
                             fontSize: w * 0.06,
                             fontWeight: FontWeight.w600,
                             fontFamily: 'Cairo'),
-                        text: 'Similar Books',
+                        text: LocaleKeys.SimilarBook.tr(),
                       ),
                       const TextSpan(text: "  "),
                       TextSpan(
@@ -220,6 +270,12 @@ class _BookDetailScreenState extends State<BookDetailScreen> {
                           child: moreSoldCard(
                               h: h,
                               w: w,
+                              lang: lang!,
+                              bookNameAr: widget
+                                  .details.semellerBooks[index].nameAr
+                                  .toString(),
+                              writerNameAr:
+                                  widget.details.semellerBooks[index].writerAr,
                               image: widget.details.semellerBooks[index].img
                                   .toString(),
                               bookId: widget.details.semellerBooks[index].id,

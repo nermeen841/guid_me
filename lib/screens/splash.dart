@@ -1,10 +1,15 @@
+// ignore_for_file: avoid_print
+
 import 'dart:async';
 import 'package:flutter/material.dart';
+import 'package:location/location.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'home_screen.dart';
 import 'onBoarding.dart';
 
 class SplashScreen extends StatefulWidget {
+  static double? startLatitude;
+  static double? startLongitude;
   const SplashScreen({Key? key}) : super(key: key);
 
   @override
@@ -13,6 +18,35 @@ class SplashScreen extends StatefulWidget {
 
 class _SplashScreenState extends State<SplashScreen> {
   Widget screen = OnBoardingScreen();
+  final location = Location();
+  getLocation() async {
+    var _serviceEnabled = await location.serviceEnabled();
+
+    if (!_serviceEnabled) {
+      _serviceEnabled = await location.requestService();
+      if (!_serviceEnabled) {
+        return;
+      }
+    }
+
+    var _permissionGranted = await location.hasPermission();
+    if (_permissionGranted == PermissionStatus.denied) {
+      _permissionGranted = await location.requestPermission();
+
+      if (_permissionGranted != PermissionStatus.granted) {
+        return;
+      }
+    }
+    var currentLocation = await location.getLocation();
+    setState(() {
+      SplashScreen.startLatitude = currentLocation.latitude!;
+      SplashScreen.startLongitude = currentLocation.longitude!;
+      String userLocation = currentLocation.latitude!.toString() +
+          ' ' +
+          currentLocation.longitude!.toString();
+      print(userLocation);
+    });
+  }
 
   getScreen() async {
     SharedPreferences prefs = await SharedPreferences.getInstance();
@@ -36,6 +70,7 @@ class _SplashScreenState extends State<SplashScreen> {
         () => Navigator.of(context).pushReplacement(
             MaterialPageRoute(builder: (BuildContext context) => screen)));
     getScreen();
+    getLocation();
   }
 
   @override
@@ -44,13 +79,11 @@ class _SplashScreenState extends State<SplashScreen> {
       color: Colors.white,
       child: Align(
         alignment: Alignment.center,
-        child: Container(
-          child: Image.asset(
-            'assets/images/logo.png',
-            fit: BoxFit.cover,
-            width: double.infinity,
-            height: 500,
-          ),
+        child: Image.asset(
+          'assets/images/logo.png',
+          fit: BoxFit.cover,
+          width: double.infinity,
+          height: 500,
         ),
       ),
     );

@@ -3,10 +3,12 @@
 import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:guid_me/generated/locale_keys.g.dart';
 import 'package:guid_me/model/books.dart';
-
+import 'package:easy_localization/easy_localization.dart';
 import 'book_detail.dart';
 import 'component.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class MoreSoldScreen extends StatefulWidget {
   @override
@@ -14,6 +16,21 @@ class MoreSoldScreen extends StatefulWidget {
 }
 
 class _MoreSoldScreenState extends State<MoreSoldScreen> {
+  String? lang;
+  getLanguage() async {
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+    final String language = prefs.getString('lang') ?? 'en';
+    setState(() {
+      lang = language;
+    });
+  }
+
+  @override
+  void initState() {
+    getLanguage();
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
     double h = MediaQuery.of(context).size.height;
@@ -26,7 +43,7 @@ class _MoreSoldScreenState extends State<MoreSoldScreen> {
         automaticallyImplyLeading: false,
         elevation: 0.0,
         title: Text(
-          'Best Seller',
+          LocaleKeys.BestSeller.tr(),
           style: TextStyle(
               fontSize: w * 0.05,
               fontWeight: FontWeight.bold,
@@ -59,15 +76,19 @@ class _MoreSoldScreenState extends State<MoreSoldScreen> {
                     return ListView.separated(
                         primary: false,
                         shrinkWrap: true,
-                        physics: BouncingScrollPhysics(),
+                        physics: const BouncingScrollPhysics(),
                         itemBuilder: (context, index) {
                           return moreSoldCard(
                               w: w,
                               h: h,
+                              lang: lang!,
                               bookName:
                                   snapshot.data.data[index].nameEn.toString(),
-                              writerName:
-                                  snapshot.data.data[index].writerEn.toString(),
+                              bookNameAr:
+                                  snapshot.data.data[index].nameAr.toString(),
+                              writerName: snapshot.data.data[index].writerEn,
+                              writerNameAr:
+                                  snapshot.data.data[index].writerAr.toString(),
                               image: snapshot.data.data[index].img.toString(),
                               price: snapshot.data.data[index].price.toString(),
                               bookId: snapshot.data.data[index].id,
