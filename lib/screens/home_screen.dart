@@ -21,7 +21,7 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-  TextEditingController search = TextEditingController();
+  // TextEditingController search = TextEditingController();
   bool isSearching = false;
   List searchData = [];
   String? lang;
@@ -225,16 +225,14 @@ class _HomeScreenState extends State<HomeScreen> {
   }
 
   searchButton({required double w, required double h}) {
-    return TextField(
+    return TextFormField(
       cursorColor: Colors.grey,
-      controller: search,
       onChanged: (val) {
         if (lang == 'en') {
           searchData.clear();
-          if (search.text.isNotEmpty) {
+          if (val.isNotEmpty) {
             setState(() {
               isSearching = true;
-              search.text = val;
             });
           } else {
             setState(() {
@@ -251,10 +249,9 @@ class _HomeScreenState extends State<HomeScreen> {
         } else {
           searchData.clear();
 
-          if (search.text.isNotEmpty) {
+          if (val.isNotEmpty) {
             setState(() {
               isSearching = true;
-              search.text = val;
             });
           } else {
             setState(() {
@@ -283,7 +280,6 @@ class _HomeScreenState extends State<HomeScreen> {
             ? InkWell(
                 onTap: () {
                   setState(() {
-                    search.clear();
                     isSearching = false;
                     searchData.clear();
                   });
@@ -293,9 +289,9 @@ class _HomeScreenState extends State<HomeScreen> {
                   color: Color(0xff5f616e),
                 ),
               )
-            : Image.asset(
-                "assets/images/search.png",
-                color: const Color(0xff5f616e),
+            : const Icon(
+                Icons.search_rounded,
+                color: Color(0xff5f616e),
               ),
         border: OutlineInputBorder(
           borderRadius: BorderRadius.circular(w * 0.5),

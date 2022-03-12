@@ -142,7 +142,7 @@ class _MapTrackScreenState extends State<MapTrackScreen> {
               target: startLocation,
               zoom: 16.0,
             ),
-            markers: markers, //markers to show on map
+            markers: markers,
             polylines: Set<Polyline>.of(polylines.values),
             zoomControlsEnabled: false,
             mapType: MapType.normal,
@@ -167,7 +167,7 @@ class _MapTrackScreenState extends State<MapTrackScreen> {
 ///////////////////////////////////////////////////////////////////////////////////////
   backIcon({required double w, required double h}) {
     return Align(
-      alignment: (lang == 'en') ? Alignment.topLeft : Alignment.topRight,
+      alignment: Alignment.topLeft,
       child: Padding(
         padding: EdgeInsets.symmetric(vertical: h * 0.01, horizontal: w * 0.03),
         child: InkWell(
@@ -193,11 +193,17 @@ class _MapTrackScreenState extends State<MapTrackScreen> {
                       blurRadius: 3)
                 ]),
             child: Center(
-              child: Icon(
-                Icons.arrow_back_ios,
-                color: const Color.fromARGB(255, 3, 24, 66),
-                size: w * 0.07,
-              ),
+              child: (lang == 'en')
+                  ? Icon(
+                      Icons.arrow_back_ios,
+                      color: const Color.fromARGB(255, 3, 24, 66),
+                      size: w * 0.07,
+                    )
+                  : Icon(
+                      Icons.arrow_forward_ios,
+                      color: const Color.fromARGB(255, 3, 24, 66),
+                      size: w * 0.07,
+                    ),
             ),
           ),
         ),
