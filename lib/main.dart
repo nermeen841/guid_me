@@ -8,6 +8,8 @@ import 'package:guid_me/screens/splash.dart';
 import 'DBhelper/AppCubit/cubit.dart';
 import 'package:easy_localization/easy_localization.dart';
 
+//
+
 Future<void> main() async {
   SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(
     statusBarColor: Color(0xff3366cc),
