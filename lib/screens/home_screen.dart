@@ -1,5 +1,3 @@
-// ignore_for_file: deprecated_member_use
-
 import 'dart:async';
 import 'dart:convert';
 import 'package:flutter/material.dart';
@@ -218,7 +216,6 @@ class _HomeScreenState extends State<HomeScreen> {
                               }
                             });
                           }
-
                           return (counter != 0)
                               ? SizedBox(
                                   width: double.infinity,

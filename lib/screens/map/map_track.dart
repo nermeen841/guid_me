@@ -28,7 +28,7 @@ class _MapTrackScreenState extends State<MapTrackScreen> {
   GoogleMapController? mapController; //contrller for Google map
   PolylinePoints polylinePoints = PolylinePoints();
 
-  String googleAPiKey = "AIzaSyBxCWZSLFx6zvcjHUGC268Mrkw0EREsyb8";
+  String googleAPiKey = "AIzaSyBUz65tAUz21QOGgtK1IGsl-dkcKIitNPU";
 
   Set<Marker> markers = {}; //markers for google map
   Map<PolylineId, Polyline> polylines = {}; //polylines to show direction
@@ -109,13 +109,9 @@ class _MapTrackScreenState extends State<MapTrackScreen> {
     Polyline polyline = Polyline(
       polylineId: id,
       visible: true,
-      consumeTapEvents: true,
       patterns: <PatternItem>[PatternItem.dash(5), PatternItem.gap(5)],
       color: const Color(0xff3366cc),
-      startCap: Cap.roundCap,
-      endCap: Cap.roundCap,
-      points: polylineCoordinates,
-      width: 8,
+      jointType: JointType.mitered,
     );
 
     setState(() {
