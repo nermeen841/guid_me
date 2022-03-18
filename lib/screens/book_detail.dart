@@ -241,6 +241,7 @@ class _BookDetailScreenState extends State<BookDetailScreen> {
                       LocaleKeys.SOLDOUT.tr(),
                       style: TextStyle(
                           fontSize: w * 0.06,
+                          fontFamily: 'Cairo',
                           fontWeight: FontWeight.bold,
                           color: const Color.fromARGB(255, 151, 16, 6)),
                     ),
