@@ -15,5 +15,15 @@
     "NearBy":" Publishing House",
     "SimilarBook":"Similar Book",
     "add_favourite":  "Add books to your favourite",
-    "sold_out":"Sold out "
+    "sold_out":"Sold out ",
+    "time":"Time",
+    "days":"DAYS",
+    "hours":"HOURS",
+    "minutes":"MINUTES",
+    "seconds":"SECONDS",
+    "time_left":"Remaining time for the end of the Cairo International Book Fair",
+    "press": "press here >>>",
+    "remider":"Remainder",
+    "day_off":"day after the exhibition ends",
+    "miss_event":"You missed the chance to attend the book fair, you can come next year"
 }

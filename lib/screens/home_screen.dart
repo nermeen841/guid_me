@@ -7,8 +7,10 @@ import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/services.dart';
 import 'package:guid_me/generated/locale_keys.g.dart';
 import 'package:guid_me/model/search.dart';
+import 'package:guid_me/screens/news.dart';
 import 'package:guid_me/screens/search/search.dart';
 import 'package:guid_me/screens/splash.dart';
+import 'package:guid_me/screens/timer.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'favoruite.dart';
 import 'package:easy_localization/easy_localization.dart';
@@ -36,9 +38,27 @@ class _HomeScreenState extends State<HomeScreen> {
     });
   }
 
+  startTimer() {
+    if (counter == 14) {
+      Timer.periodic(const Duration(days: 1), (e) {
+        if (e.isActive) {
+          setState(() {
+            counter--;
+          });
+          if (counter == 0) {
+            setState(() {
+              e.cancel();
+            });
+          }
+        }
+      });
+    }
+  }
+
   @override
   void initState() {
     readSearchData();
+    startTimer();
     getLanguage();
     super.initState();
   }
@@ -54,6 +74,15 @@ class _HomeScreenState extends State<HomeScreen> {
         elevation: 0.0,
         backgroundColor: Colors.transparent,
         automaticallyImplyLeading: false,
+        leading: IconButton(
+          onPressed: () => Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: ((context) => const LatestNewsScreen()),
+            ),
+          ),
+          icon: const Icon(Icons.newspaper_rounded, color: Color(0xff3366cc)),
+        ),
         actions: [
           PopupMenuButton(
               icon: const Icon(Icons.language, color: Color(0xff3366cc)),
@@ -203,59 +232,73 @@ class _HomeScreenState extends State<HomeScreen> {
                       SizedBox(
                         height: h * 0.14,
                       ),
-
-                      StatefulBuilder(
-                        builder: (context2, setState3) {
-                          if (counter == 14) {
-                            timer = Timer.periodic(
-                                const Duration(days: 1), (e) {
-                              if (e.isActive) {
-                                setState3(() {
-                                  counter--;
-                                });
-                              }
-                              if (counter == 0) {
-                                e.cancel();
-                              }
-                            });
-                          }
-
-
-                          return (counter != 0)? SizedBox(
-                            width: double.infinity,
-                            child: Row(
-                              crossAxisAlignment: CrossAxisAlignment.center,
-                              mainAxisAlignment:
-                              MainAxisAlignment.center,
-                              children: [
-                            InkWell(
-                            child: RichText(
-                            text: TextSpan(children: [
-                            TextSpan(
-                            text: "باقي  ",
+                      (counter != 0)
+                          ? SizedBox(
+                              width: double.infinity,
+                              child: Column(
+                                children: [
+                                  Row(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.center,
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    children: [
+                                      RichText(
+                                        text: TextSpan(children: [
+                                          TextSpan(
+                                            text: LocaleKeys.REMINDER.tr(),
+                                            style: TextStyle(
+                                                color: Colors.black,
+                                                fontFamily: 'Cairo',
+                                                fontSize: w * 0.035),
+                                          ),
+                                        ]),
+                                      ),
+                                      Text(counter.toString(),
+                                          style: const TextStyle(
+                                              color: Colors.black)),
+                                      Text(LocaleKeys.DAYS_OFF.tr(),
+                                          textAlign: TextAlign.center,
+                                          style: TextStyle(
+                                              color: Colors.black,
+                                              fontSize: w * 0.035,
+                                              fontFamily: 'Cairo')),
+                                    ],
+                                  ),
+                                  TextButton(
+                                    onPressed: () => Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                            builder: (context) =>
+                                                const TimerScreen())),
+                                    child: Text(
+                                      LocaleKeys.PRESS.tr(),
+                                      style: TextStyle(
+                                          fontFamily: 'Cairo',
+                                          fontSize: w * 0.04,
+                                          color: const Color.fromARGB(
+                                              255, 6, 63, 110),
+                                          fontWeight: FontWeight.bold),
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            )
+                          : SizedBox(
+                              width: w * 0.7,
+                              child: Text(
+                                LocaleKeys.MISS_EVENT.tr(),
+                                textAlign: TextAlign.center,
+                                maxLines: 3,
                                 style: TextStyle(
-                                    color: Colors.black,
-                                    fontSize: w * 0.035)),
-                              ]),
-                          ),
+                                    fontFamily: 'Cairo',
+                                    fontSize: w * 0.05,
+                                    color: const Color.fromARGB(255, 31, 3, 48),
+                                    fontWeight: FontWeight.bold),
+                              ),
                             ),
-                                Text(counter.toString(),
-                                    style: const TextStyle(
-                                        color: Colors.black)),
-                               const Text('  يوم من انتهاء المعرض',
-                                    style: TextStyle(
-                                        color: Colors.black)),
-                              ],
-                            ),
-                          ) :
-                     const Text(
-                         'لقد فاتتك فرصة حضور معرض الكتاب , يمكنك الحضور السنة القادمة');
-                        },
-                      ),
                       SizedBox(
-                        height: h * 0.07,
+                        height: h * 0.05,
                       ),
-
                       DefaultTextStyle(
                         textAlign: TextAlign.center,
                         style: const TextStyle(
@@ -380,7 +423,4 @@ class _HomeScreenState extends State<HomeScreen> {
     });
     return searchModel;
   }
-
-
-
 }

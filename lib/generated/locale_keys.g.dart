@@ -21,4 +21,14 @@ abstract class LocaleKeys {
   static const SimilarBook = 'SimilarBook';
   static const ADD_FAVOURITE = "add_favourite";
   static const SOLDOUT = "sold_out";
+  static const TIME = "time";
+  static const DAYS = "days";
+  static const HOURS = "hours";
+  static const MINUTES = "minutes";
+  static const SECONDS = "seconds";
+  static const TIME_LEFT = "time_left";
+  static const PRESS = "press";
+  static const REMINDER = "remider";
+  static const DAYS_OFF = "day_off";
+  static const MISS_EVENT = "miss_event";
 }

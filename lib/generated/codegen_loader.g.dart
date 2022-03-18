@@ -31,7 +31,17 @@ class CodegenLoader extends AssetLoader {
     "NearBy": "دور النشر",
     "SimilarBook": "كتب مشابهة",
     "add_favourite": "اضف كتب للمفضلة",
-    "sold_out": "لقد نفذت الكمية"
+    "sold_out": "لقد نفذت الكمية",
+    "time": "التوقيت",
+    "days": "يوم",
+    "hours": "الساعة",
+    "minutes": "دقيقة",
+    "seconds": "ثانية",
+    "time_left": "الوقت المتبقي لانتهاء معرض القاهره الدولي للكتاب",
+    "press": "اضغط هنا >>>",
+    "remider": "متبقي",
+    "day_off": " يوم من انتهاء المعرض",
+    "miss_event": "لقد فاتتك فرصة حضور معرض الكتاب , يمكنك الحضور السنة القادمة"
   };
   static const Map<String, dynamic> en = {
     "Search": "Search",
@@ -50,7 +60,19 @@ class CodegenLoader extends AssetLoader {
     "NearBy": " Publishing House",
     "SimilarBook": "Similar Book",
     "add_favourite": "Add books to your favourite",
-    "sold_out": "Sold out "
+    "sold_out": "Sold out ",
+    "time": "Time",
+    "days": "DAYS",
+    "hours": "HOURS",
+    "minutes": "MINUTES",
+    "seconds": "SECONDS",
+    "time_left":
+        "Remaining time for the end of the Cairo International Book Fair",
+    "press": "press here >>>",
+    "remider": "Remainder",
+    "day_off": "day after the exhibition ends",
+    "miss_event":
+        "You missed the chance to attend the book fair, you can come next year"
   };
 
   static const Map<String, Map<String, dynamic>> mapLocales = {
