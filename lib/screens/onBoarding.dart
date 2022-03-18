@@ -16,7 +16,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
   List<Map<String, String>> splashData = [
     {
       "text":
-          "GUIED ME is your fastest way ever \n to find your favorite books",
+          "GUIED ME is your fastest way ever to \n find your favorite books in the book fair",
       "image": "assets/images/onboearding.png"
     },
     {"text": 'Reading Is Life', "image": "assets/images/13258.jpg"},
@@ -74,9 +74,9 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                 title: 'GUIED ME',
                 textColor: Colors.white,
                 onPressed: () async {
-                  SharedPreferences prefs =
-                      await SharedPreferences.getInstance();
-                  prefs.setBool('is_onboearding', true);
+                  // SharedPreferences prefs =
+                  //     await SharedPreferences.getInstance();
+                  // prefs.setBool('is_onboearding', true);
                   Navigator.push(
                       context,
                       MaterialPageRoute(
@@ -125,10 +125,10 @@ class SplashContent extends StatelessWidget {
           height: h * 0.02,
         ),
         SizedBox(
-          width: w * 0.8,
+          width: w * 0.85,
           child: Text(
             text,
-            maxLines: 2,
+            maxLines: 3,
             textAlign: TextAlign.center,
             style: TextStyle(
                 fontSize: w * 0.05,

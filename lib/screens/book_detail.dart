@@ -181,44 +181,62 @@ class _BookDetailScreenState extends State<BookDetailScreen> {
           SizedBox(
             height: h * 0.02,
           ),
-          ListView.separated(
-              primary: false,
-              shrinkWrap: true,
-              itemBuilder: (context, index) => InkWell(
-                    onTap: () => Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => MapTrackScreen(
-                          latitude: widget.details.darElnasher[index].lat,
-                          logtitude: widget.details.darElnasher[index].long,
+          (widget.details.darElnasher.isNotEmpty)
+              ? ListView.separated(
+                  primary: false,
+                  shrinkWrap: true,
+                  itemBuilder: (context, index) => InkWell(
+                        onTap: () => Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => MapTrackScreen(
+                              latitude: widget.details.darElnasher[index].lat,
+                              logtitude: widget.details.darElnasher[index].long,
+                              name: (lang == 'en')
+                                  ? widget.details.darElnasher[index].nameEn
+                                  : widget.details.darElnasher[index].nameAr,
+                              city: (lang == 'en')
+                                  ? widget.details.darElnasher[index].addressEn
+                                  : widget.details.darElnasher[index].addressAr,
+                            ),
+                          ),
+                        ),
+                        child: buildPublishingHouseCard(
+                          w: w,
+                          h: h,
+                          address: (lang == 'en')
+                              ? widget.details.darElnasher[index].addressEn
+                              : widget.details.darElnasher[index].addressAr,
+                          // area: widget.details.darElnasher[index].area,
+                          status: (lang == 'en')
+                              ? widget.details.darElnasher[index].statusEn
+                              : widget.details.darElnasher[index].statusAr,
                           name: (lang == 'en')
                               ? widget.details.darElnasher[index].nameEn
                               : widget.details.darElnasher[index].nameAr,
-                          city: (lang == 'en')
-                              ? widget.details.darElnasher[index].addressEn
-                              : widget.details.darElnasher[index].addressAr,
                         ),
                       ),
+                  separatorBuilder: (context, index) => SizedBox(
+                        height: h * 0.025,
+                      ),
+                  itemCount: widget.details.darElnasher.length)
+              : Row(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    const Icon(
+                      Icons.mood_bad,
+                      color: Color.fromARGB(255, 151, 16, 6),
                     ),
-                    child: buildPublishingHouseCard(
-                      w: w,
-                      h: h,
-                      address: (lang == 'en')
-                          ? widget.details.darElnasher[index].addressEn
-                          : widget.details.darElnasher[index].addressAr,
-                      // area: widget.details.darElnasher[index].area,
-                      status: (lang == 'en')
-                          ? widget.details.darElnasher[index].statusEn
-                          : widget.details.darElnasher[index].statusAr,
-                      name: (lang == 'en')
-                          ? widget.details.darElnasher[index].nameEn
-                          : widget.details.darElnasher[index].nameAr,
+                    Text(
+                      LocaleKeys.SOLDOUT.tr(),
+                      style: TextStyle(
+                          fontSize: w * 0.04,
+                          fontWeight: FontWeight.w500,
+                          color: const Color.fromARGB(255, 151, 16, 6)),
                     ),
-                  ),
-              separatorBuilder: (context, index) => SizedBox(
-                    height: h * 0.025,
-                  ),
-              itemCount: widget.details.darElnasher.length),
+                  ],
+                ),
           SizedBox(
             height: h * 0.05,
           ),

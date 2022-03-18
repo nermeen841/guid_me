@@ -14,5 +14,6 @@
     "Publishing":"Publishing",
     "NearBy":"Nearby Publishing House",
     "SimilarBook":"Similar Book",
-    "add_favourite":  "Add books to your favourite"
+    "add_favourite":  "Add books to your favourite",
+    "sold_out":"Sold out "
 }

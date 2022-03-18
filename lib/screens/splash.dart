@@ -17,7 +17,6 @@ class SplashScreen extends StatefulWidget {
 }
 
 class _SplashScreenState extends State<SplashScreen> {
-  Widget screen = OnBoardingScreen();
   final location = Location();
   getLocation() async {
     var _serviceEnabled = await location.serviceEnabled();
@@ -48,28 +47,14 @@ class _SplashScreenState extends State<SplashScreen> {
     });
   }
 
-  getScreen() async {
-    SharedPreferences prefs = await SharedPreferences.getInstance();
-    final bool isOnboearding = prefs.getBool('is_onboearding') ?? false;
-    if (isOnboearding) {
-      setState(() {
-        screen = const HomeScreen();
-      });
-    } else {
-      setState(() {
-        screen = OnBoardingScreen();
-      });
-    }
-  }
-
   @override
   void initState() {
     super.initState();
     Timer(
         const Duration(seconds: 5),
-        () => Navigator.of(context).pushReplacement(
-            MaterialPageRoute(builder: (BuildContext context) => screen)));
-    getScreen();
+        () => Navigator.of(context).pushReplacement(MaterialPageRoute(
+            builder: (BuildContext context) => OnBoardingScreen())));
+
     getLocation();
   }
 

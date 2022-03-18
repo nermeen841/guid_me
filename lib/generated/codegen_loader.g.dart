@@ -30,7 +30,8 @@ class CodegenLoader extends AssetLoader {
     "Publishing": "النشر",
     "NearBy": "دار النشر الاقرب",
     "SimilarBook": "كتب مشابهة",
-    "add_favourite": "اضف كتب للمفضلة"
+    "add_favourite": "اضف كتب للمفضلة",
+    "sold_out": "لقد نفذت الكمية"
   };
   static const Map<String, dynamic> en = {
     "Search": "Search",
@@ -48,7 +49,8 @@ class CodegenLoader extends AssetLoader {
     "Publishing": "Publishing",
     "NearBy": "Nearby Publishing House",
     "SimilarBook": "Similar Book",
-    "add_favourite": "Add books to your favourite"
+    "add_favourite": "Add books to your favourite",
+    "sold_out": "Sold out "
   };
 
   static const Map<String, Map<String, dynamic>> mapLocales = {

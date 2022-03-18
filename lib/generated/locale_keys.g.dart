@@ -20,4 +20,5 @@ abstract class LocaleKeys {
   static const NoResult = 'NoResult';
   static const SimilarBook = 'SimilarBook';
   static const ADD_FAVOURITE = "add_favourite";
+  static const SOLDOUT = "sold_out";
 }
