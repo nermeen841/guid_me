@@ -1,5 +1,6 @@
 // ignore_for_file: deprecated_member_use
 
+import 'dart:async';
 import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:animated_text_kit/animated_text_kit.dart';
@@ -25,6 +26,8 @@ class _HomeScreenState extends State<HomeScreen> {
   bool isSearching = false;
   List searchData = [];
   String? lang;
+  int counter = 14;
+  late Timer timer;
   getLanguage() async {
     SharedPreferences prefs = await SharedPreferences.getInstance();
     final String language = prefs.getString('lang') ?? 'en';
@@ -198,8 +201,61 @@ class _HomeScreenState extends State<HomeScreen> {
                         ],
                       ),
                       SizedBox(
-                        height: h * 0.26,
+                        height: h * 0.14,
                       ),
+
+                      StatefulBuilder(
+                        builder: (context2, setState3) {
+                          if (counter == 14) {
+                            timer = Timer.periodic(
+                                const Duration(days: 1), (e) {
+                              if (e.isActive) {
+                                setState3(() {
+                                  counter--;
+                                });
+                              }
+                              if (counter == 0) {
+                                e.cancel();
+                              }
+                            });
+                          }
+
+
+                          return (counter != 0)? SizedBox(
+                            width: double.infinity,
+                            child: Row(
+                              crossAxisAlignment: CrossAxisAlignment.center,
+                              mainAxisAlignment:
+                              MainAxisAlignment.center,
+                              children: [
+                            InkWell(
+                            child: RichText(
+                            text: TextSpan(children: [
+                            TextSpan(
+                            text: "باقي  ",
+                                style: TextStyle(
+                                    color: Colors.black,
+                                    fontSize: w * 0.035)),
+                              ]),
+                          ),
+                            ),
+                                Text(counter.toString(),
+                                    style: const TextStyle(
+                                        color: Colors.black)),
+                               const Text('  يوم من انتهاء المعرض',
+                                    style: TextStyle(
+                                        color: Colors.black)),
+                              ],
+                            ),
+                          ) :
+                     const Text(
+                         'لقد فاتتك فرصة حضور معرض الكتاب , يمكنك الحضور السنة القادمة');
+                        },
+                      ),
+                      SizedBox(
+                        height: h * 0.07,
+                      ),
+
                       DefaultTextStyle(
                         textAlign: TextAlign.center,
                         style: const TextStyle(
@@ -324,4 +380,7 @@ class _HomeScreenState extends State<HomeScreen> {
     });
     return searchModel;
   }
+
+
+
 }
