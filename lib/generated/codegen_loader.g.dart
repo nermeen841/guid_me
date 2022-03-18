@@ -28,7 +28,7 @@ class CodegenLoader extends AssetLoader {
     "HullNumber": "القاعة",
     "Suite": "الجناح",
     "Publishing": "النشر",
-    "NearBy": "دار النشر الاقرب",
+    "NearBy": "دور النشر",
     "SimilarBook": "كتب مشابهة",
     "add_favourite": "اضف كتب للمفضلة",
     "sold_out": "لقد نفذت الكمية"
@@ -47,7 +47,7 @@ class CodegenLoader extends AssetLoader {
     "Suite": "Suite",
     "NoResult": "No result found for your search",
     "Publishing": "Publishing",
-    "NearBy": "Nearby Publishing House",
+    "NearBy": " Publishing House",
     "SimilarBook": "Similar Book",
     "add_favourite": "Add books to your favourite",
     "sold_out": "Sold out "
