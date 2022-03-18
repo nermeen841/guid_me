@@ -3,8 +3,6 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:location/location.dart';
-import 'package:shared_preferences/shared_preferences.dart';
-import 'home_screen.dart';
 import 'onBoarding.dart';
 
 class SplashScreen extends StatefulWidget {

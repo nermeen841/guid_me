@@ -168,16 +168,21 @@ class _BookDetailScreenState extends State<BookDetailScreen> {
           SizedBox(
             height: h * 0.02,
           ),
-          Center(
-            child: Text(
-              LocaleKeys.NearBy.tr(),
-              style: TextStyle(
-                  color: const Color(0xff3366cc),
-                  fontSize: w * 0.06,
-                  fontWeight: FontWeight.w600,
-                  fontFamily: 'Cairo'),
-            ),
+          SizedBox(
+            height: h * 0.02,
           ),
+          (widget.details.darElnasher.isNotEmpty)
+              ? Center(
+                  child: Text(
+                    LocaleKeys.NearBy.tr(),
+                    style: TextStyle(
+                        color: const Color(0xff3366cc),
+                        fontSize: w * 0.06,
+                        fontWeight: FontWeight.w600,
+                        fontFamily: 'Cairo'),
+                  ),
+                )
+              : Container(),
           SizedBox(
             height: h * 0.02,
           ),
@@ -224,15 +229,20 @@ class _BookDetailScreenState extends State<BookDetailScreen> {
                   crossAxisAlignment: CrossAxisAlignment.center,
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    const Icon(
+                    Icon(
                       Icons.mood_bad,
-                      color: Color.fromARGB(255, 151, 16, 6),
+                      color: const Color.fromARGB(255, 151, 16, 6),
+                      size: w * 0.1,
+                    ),
+                    SizedBox(
+                      width: w * 0.02,
                     ),
                     Text(
                       LocaleKeys.SOLDOUT.tr(),
                       style: TextStyle(
-                          fontSize: w * 0.04,
-                          fontWeight: FontWeight.w500,
+                          fontSize: w * 0.06,
+                          fontFamily: 'Cairo',
+                          fontWeight: FontWeight.bold,
                           color: const Color.fromARGB(255, 151, 16, 6)),
                     ),
                   ],
