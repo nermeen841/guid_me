@@ -25,7 +25,7 @@ class Data {
   String? writerEn;
   String? img;
   int? hullNum;
-  int? sectionNum;
+  String? sectionNum;
   String? lat;
   String? long;
   List<SemellerBooks>? semellerBooks;
@@ -91,7 +91,7 @@ class SemellerBooks {
   String? writerEn;
   String? img;
   int? hullNum;
-  int? sectionNum;
+  String? sectionNum;
   String? lat;
   String? long;
   List<SemellerBooksdata>? semellerBooks;
@@ -157,7 +157,7 @@ class SemellerBooksdata {
   String? writerEn;
   String? img;
   int? hullNum;
-  int? sectionNum;
+  String? sectionNum;
   String? lat;
   String? long;
 
