@@ -25,7 +25,7 @@ class Data {
   String? writerEn;
   String? img;
   int? hullNum;
-  int? sectionNum;
+  String? sectionNum;
   String? lat;
   String? long;
   List<SemellerBooks>? semellerBooks;
