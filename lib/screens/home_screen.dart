@@ -228,7 +228,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         ],
                       ),
                       SizedBox(
-                        height: h * 0.14,
+                        height: h * 0.09,
                       ),
                       (counter != 0)
                           ? SizedBox(
@@ -295,7 +295,7 @@ class _HomeScreenState extends State<HomeScreen> {
                               ),
                             ),
                       SizedBox(
-                        height: h * 0.05,
+                        height: h * 0.03,
                       ),
                       DefaultTextStyle(
                         textAlign: TextAlign.center,
