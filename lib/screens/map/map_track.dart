@@ -28,7 +28,7 @@ class _MapTrackScreenState extends State<MapTrackScreen> {
   GoogleMapController? mapController; //contrller for Google map
   PolylinePoints polylinePoints = PolylinePoints();
 
-  String googleAPiKey = "AIzaSyBUz65tAUz21QOGgtK1IGsl-dkcKIitNPU";
+  String googleAPiKey = "AIzaSyANHFLOPg0mwSHWW1bqBx5XgOrk1SjTVEw";
 
   Set<Marker> markers = {}; //markers for google map
   Map<PolylineId, Polyline> polylines = {}; //polylines to show direction
@@ -139,6 +139,7 @@ class _MapTrackScreenState extends State<MapTrackScreen> {
               zoom: 16.0,
             ),
             markers: markers,
+            // polygons: MapHolder.instance.mapPolygons!,
             polylines: Set<Polyline>.of(polylines.values),
             zoomControlsEnabled: false,
             mapType: MapType.normal,

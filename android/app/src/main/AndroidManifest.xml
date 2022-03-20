@@ -1,5 +1,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.guid_me">
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
      <uses-permission android:name="android.permission.INTERNET"/>
      <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
      <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION"/>
@@ -35,6 +36,6 @@
             android:value="2" />
         <meta-data 
             android:name="com.google.android.geo.API_KEY" 
-            android:value="AIzaSyBUz65tAUz21QOGgtK1IGsl-dkcKIitNPU"/>    
+            android:value="AIzaSyANHFLOPg0mwSHWW1bqBx5XgOrk1SjTVEw"/>
     </application>
 </manifest>
