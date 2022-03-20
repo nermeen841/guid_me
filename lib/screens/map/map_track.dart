@@ -28,7 +28,7 @@ class _MapTrackScreenState extends State<MapTrackScreen> {
   GoogleMapController? mapController; //contrller for Google map
   PolylinePoints polylinePoints = PolylinePoints();
 
-  String googleAPiKey = "AIzaSyAoWPlQ_Ac_sSw_FrqXTDKoR19cTbQT00c";
+  String googleAPiKey = "AIzaSyBxCWZSLFx6zvcjHUGC268Mrkw0EREsyb8";
 
   Set<Marker> markers = {}; //markers for google map
   Map<PolylineId, Polyline> polylines = {}; //polylines to show direction
@@ -93,7 +93,6 @@ class _MapTrackScreenState extends State<MapTrackScreen> {
           double.parse(widget.latitude), double.parse(widget.logtitude)),
       travelMode: TravelMode.driving,
     );
-
     if (result.points.isNotEmpty) {
       for (var point in result.points) {
         polylineCoordinates.add(LatLng(point.latitude, point.longitude));
@@ -140,7 +139,7 @@ class _MapTrackScreenState extends State<MapTrackScreen> {
             ),
             markers: markers,
             polylines: Set<Polyline>.of(polylines.values),
-            zoomControlsEnabled: false,
+            zoomControlsEnabled: true,
             mapType: MapType.normal,
             onMapCreated: (controller) {
               setState(() {

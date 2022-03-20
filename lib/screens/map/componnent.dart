@@ -54,8 +54,7 @@ class _LocationCardState extends State<LocationCard> {
       child: Container(
         height: h * 0.2,
         margin: EdgeInsets.all(w * 0.07),
-        padding:
-            EdgeInsets.symmetric(horizontal: w * 0.03, vertical: h * 0.015),
+        padding: EdgeInsets.symmetric(horizontal: w * 0.03, vertical: h * 0.01),
         decoration: BoxDecoration(
             color: Colors.white,
             borderRadius: BorderRadius.circular(w * 0.05),
@@ -89,7 +88,7 @@ class _LocationCardState extends State<LocationCard> {
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
                 SizedBox(
-                  height: h * 0.015,
+                  height: h * 0.01,
                 ),
                 SizedBox(
                   width: w * 0.45,
@@ -102,9 +101,6 @@ class _LocationCardState extends State<LocationCard> {
                         fontWeight: FontWeight.bold,
                         fontFamily: 'Cairo'),
                   ),
-                ),
-                SizedBox(
-                  height: h * 0.01,
                 ),
                 Row(
                   children: [
@@ -122,9 +118,6 @@ class _LocationCardState extends State<LocationCard> {
                       ),
                     ),
                   ],
-                ),
-                SizedBox(
-                  height: h * 0.01,
                 ),
                 Row(
                   children: [
