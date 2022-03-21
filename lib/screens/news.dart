@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:guid_me/generated/locale_keys.g.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'package:easy_localization/easy_localization.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class LatestNewsScreen extends StatefulWidget {
   const LatestNewsScreen({Key? key}) : super(key: key);
@@ -71,30 +74,85 @@ class _LatestNewsScreenState extends State<LatestNewsScreen> {
               child: const Icon(
                 Icons.close,
                 color: Colors.black,
-                size: 35,
+                size: 30,
               ))
         ],
       ),
       body: SizedBox(
         width: w,
         height: h,
-        child: ListView(
-          primary: true,
-          shrinkWrap: true,
-          padding:
-              EdgeInsets.symmetric(vertical: h * 0.02, horizontal: w * 0.02),
-          children: [
-            FutureBuilder(
-                future: Future.delayed(const Duration(seconds: 5), () => true),
-                builder: (context, snapshot) {
-                  if (!snapshot.hasData) {
-                    return Center(
-                      child: Image.asset(
-                          "assets/images/37369-loading-granulated.gif"),
-                    );
-                  }
+        child: FutureBuilder(
+            future: Future.delayed(const Duration(seconds: 5), () => true),
+            builder: (context, snapshot) {
+              if (!snapshot.hasData) {
+                return Center(
+                  child:
+                      Image.asset("assets/images/37369-loading-granulated.gif"),
+                );
+              }
 
-                  return ListView.separated(
+              return ListView(
+                primary: true,
+                shrinkWrap: true,
+                padding: EdgeInsets.symmetric(
+                    vertical: h * 0.02, horizontal: w * 0.02),
+                children: [
+                  Text(
+                    LocaleKeys.FACEBOOK.tr(),
+                    style: TextStyle(
+                      fontSize: w * 0.04,
+                      fontWeight: FontWeight.w600,
+                      fontFamily: 'Cairo',
+                      color: const Color(0xff3366cc),
+                    ),
+                  ),
+                  SizedBox(
+                    height: h * 0.02,
+                  ),
+                  InkWell(
+                    onTap: () async {
+                      await launch(
+                        "https://www.facebook.com/cairobookfair/",
+                        forceSafariVC: false,
+                        forceWebView: true,
+                      );
+                    },
+                    child: Row(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: [
+                        const Icon(
+                          Icons.facebook_rounded,
+                          color: Color(0xff3366cc),
+                        ),
+                        SizedBox(
+                          width: w * 0.015,
+                        ),
+                        Text(
+                          "https://www.facebook.com/cairobookfair/",
+                          style: TextStyle(
+                              fontSize: w * 0.04,
+                              fontWeight: FontWeight.w500,
+                              fontFamily: 'Cairo',
+                              color: Colors.black),
+                        )
+                      ],
+                    ),
+                  ),
+                  SizedBox(
+                    height: h * 0.03,
+                  ),
+                  Padding(
+                    padding: EdgeInsets.only(left: w * 0.2, right: w * 0.2),
+                    child: const Divider(
+                      thickness: 3,
+                      color: Color(0xff3366cc),
+                    ),
+                  ),
+                  SizedBox(
+                    height: h * 0.03,
+                  ),
+                  ListView.separated(
                       shrinkWrap: true,
                       primary: false,
                       itemBuilder: (context, index) => notifyItem(
@@ -117,10 +175,10 @@ class _LatestNewsScreenState extends State<LatestNewsScreen> {
                               ),
                             ],
                           ),
-                      itemCount: images.length);
-                }),
-          ],
-        ),
+                      itemCount: images.length),
+                ],
+              );
+            }),
       ),
     );
   }
@@ -168,7 +226,7 @@ class _LatestNewsScreenState extends State<LatestNewsScreen> {
                 height: h * 0.01,
               ),
               Text(
-                date + time,
+                date + "   " + time,
                 textAlign: TextAlign.start,
                 maxLines: 3,
                 style: TextStyle(

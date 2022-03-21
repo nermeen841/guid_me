@@ -41,7 +41,9 @@ class CodegenLoader extends AssetLoader {
     "press": "اضغط هنا >>>",
     "remider": "متبقي",
     "day_off": " يوم من انتهاء المعرض",
-    "miss_event": "لقد فاتتك فرصة حضور معرض الكتاب , يمكنك الحضور السنة القادمة"
+    "miss_event":
+        "لقد فاتتك فرصة حضور معرض الكتاب , يمكنك الحضور السنة القادمة",
+    "face": "يمكنك متابعة احدث الفعاليات علي صفحتنا علي الفيسبوك"
   };
   static const Map<String, dynamic> en = {
     "Search": "Search",
@@ -72,7 +74,8 @@ class CodegenLoader extends AssetLoader {
     "remider": "Remainder",
     "day_off": "day after the exhibition ends",
     "miss_event":
-        "You missed the chance to attend the book fair, you can come next year"
+        "You missed the chance to attend the book fair, you can come next year",
+    "face": "You can follow the latest events on our Facebook page"
   };
 
   static const Map<String, Map<String, dynamic>> mapLocales = {

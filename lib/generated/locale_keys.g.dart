@@ -31,4 +31,5 @@ abstract class LocaleKeys {
   static const REMINDER = "remider";
   static const DAYS_OFF = "day_off";
   static const MISS_EVENT = "miss_event";
+  static const FACEBOOK = "face";
 }

@@ -46,6 +46,7 @@ dependencies:
   geocoding: ^2.0.2
   maps_toolkit: ^2.0.0
   firebase_core: ^1.13.1
+  url_launcher: ^6.0.20
 
 dev_dependencies:
   flutter_test:
