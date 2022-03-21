@@ -24,6 +24,26 @@ class _LatestNewsScreenState extends State<LatestNewsScreen> {
     super.initState();
   }
 
+  List<String> images = [
+    "assets/images/ahmed.jpeg",
+    "assets/images/Ali.jpg",
+    "assets/images/hanan.jpg",
+    "assets/images/ayman.jpg",
+    "assets/images/274920349_387828282673748_3632245269465058172_n.jpg",
+    "assets/images/274920349_387828282673748_3632245269465058172_n.jpg",
+    "assets/images/274920349_387828282673748_3632245269465058172_n.jpg",
+  ];
+
+  List<String> titles = [
+    "أعلن الكاتب والروائي أحمد مراد عن كتابه الجديد المرتقب إصداره في عام 2022 عن دار الشروق للنشر والتوزيع ويحمل عنوان: القتل للمبتدئين.",
+    "لا تفوت فرصه لقاء الكتاب علي بن جابر الفيفي لتوقيعه كتاب لانك الله",
+    "حنان لاشين هي كاتبة روائية مصرية حاصلة على بكالوريوس الطب البيطري من جامعة الإسكندرية، وهي عضو اتحاد كتاب مصر",
+    "لا تفوت فرصه لقاء الكتاب ايمن العتوم لتوقيعه كتاب كلمة الله",
+    "سوف يتم عمل ورشه تفاعليه برئاسة اسماء عواد الساعه 2: 45",
+    "الفقرة الفنيه : فقرة النيل للالات الشعبيه سوف تقام في تمام الساعة الثالثة ",
+    "فقرة حلمك سوف يحضر د . حسين بكر سوف يتحدث عن مبادئ التصوير السنيمائي"
+  ];
+
   @override
   Widget build(BuildContext context) {
     double h = MediaQuery.of(context).size.height;
@@ -58,32 +78,48 @@ class _LatestNewsScreenState extends State<LatestNewsScreen> {
       body: SizedBox(
         width: w,
         height: h,
-        child: Padding(
+        child: ListView(
+          primary: true,
+          shrinkWrap: true,
           padding:
               EdgeInsets.symmetric(vertical: h * 0.02, horizontal: w * 0.02),
-          child: FutureBuilder(
-              future: Future.delayed(const Duration(seconds: 5), () => true),
-              builder: (context, snapshot) {
-                if (!snapshot.hasData) {
-                  return Center(
+          children: [
+            FutureBuilder(
+                future: Future.delayed(const Duration(seconds: 5), () => true),
+                builder: (context, snapshot) {
+                  if (!snapshot.hasData) {
+                    return Center(
                       child: Image.asset(
-                          "assets/images/37369-loading-granulated.gif"));
-                }
+                          "assets/images/37369-loading-granulated.gif"),
+                    );
+                  }
 
-                return ListView.separated(
-                    itemBuilder: (context, index) => notifyItem(
-                        image:
-                            "assets/images/274920349_387828282673748_3632245269465058172_n.jpg",
-                        w: w,
-                        h: h,
-                        text: "important notification ",
-                        date: "14 April 2022",
-                        time: "4 : 00 pm"),
-                    separatorBuilder: (context, index) => SizedBox(
-                          height: h * 0.03,
-                        ),
-                    itemCount: 3);
-              }),
+                  return ListView.separated(
+                      shrinkWrap: true,
+                      primary: false,
+                      itemBuilder: (context, index) => notifyItem(
+                          image: images[index],
+                          w: w,
+                          h: h,
+                          text: titles[index],
+                          date: "14 April 2022",
+                          time: "4 : 00 pm"),
+                      separatorBuilder: (context, index) => Column(
+                            children: [
+                              SizedBox(
+                                height: h * 0.03,
+                              ),
+                              const Divider(
+                                color: Color(0xff3366cc),
+                              ),
+                              SizedBox(
+                                height: h * 0.03,
+                              ),
+                            ],
+                          ),
+                      itemCount: images.length);
+                }),
+          ],
         ),
       ),
     );
@@ -114,15 +150,19 @@ class _LatestNewsScreenState extends State<LatestNewsScreen> {
             crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisSize: MainAxisSize.min,
             children: [
-              Text(
-                text,
-                textAlign: TextAlign.start,
-                maxLines: 3,
-                style: TextStyle(
-                    fontFamily: 'Cairo',
-                    fontSize: w * 0.04,
-                    color: Colors.black,
-                    fontWeight: FontWeight.w600),
+              SizedBox(
+                width: w * 0.7,
+                child: Text(
+                  text,
+                  textAlign: TextAlign.start,
+                  maxLines: 5,
+                  overflow: TextOverflow.ellipsis,
+                  style: TextStyle(
+                      fontFamily: 'Cairo',
+                      fontSize: w * 0.04,
+                      color: Colors.black,
+                      fontWeight: FontWeight.w600),
+                ),
               ),
               SizedBox(
                 height: h * 0.01,

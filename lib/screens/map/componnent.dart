@@ -27,6 +27,7 @@ class _LocationCardState extends State<LocationCard> {
       : LatLng(30.1552360, 31.6128923);
 
   late double distance;
+  late double time;
   calculateDistance() {
     setState(() {
       distance = SphericalUtil.computeDistanceBetween(
@@ -34,6 +35,7 @@ class _LocationCardState extends State<LocationCard> {
               LatLng(double.parse(widget.latitude),
                   double.parse(widget.logtitude))) /
           1000.0;
+      time = distance / 80;
     });
 
     return distance;
@@ -52,7 +54,7 @@ class _LocationCardState extends State<LocationCard> {
     return Align(
       alignment: Alignment.bottomCenter,
       child: Container(
-        height: h * 0.2,
+        height: h * 0.24,
         margin: EdgeInsets.all(w * 0.07),
         padding: EdgeInsets.symmetric(horizontal: w * 0.03, vertical: h * 0.01),
         decoration: BoxDecoration(
@@ -141,49 +143,30 @@ class _LocationCardState extends State<LocationCard> {
                     ),
                   ],
                 ),
+                Row(
+                  children: [
+                    Icon(
+                      Icons.watch_later_outlined,
+                      color: const Color(0xff3366cc),
+                      size: w * 0.04,
+                    ),
+                    SizedBox(
+                      width: w * 0.015,
+                    ),
+                    SizedBox(
+                      width: w * 0.4,
+                      child: Text(
+                        time.toStringAsFixed(3).toString() + " " + "Hour",
+                        style: const TextStyle(
+                          fontWeight: FontWeight.bold,
+                          color: Color(0xff3366cc),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
               ],
             ),
-            // Column(
-            //   children: [
-            //     InkWell(
-            //       onTap: () {},
-            //       child: Container(
-            //         width: w * 0.1,
-            //         height: h * 0.07,
-            //         decoration: BoxDecoration(
-            //           color: const Color(0xff3366cc),
-            //           borderRadius: BorderRadius.circular(w * 0.02),
-            //         ),
-            //         child: const Center(
-            //           child: Icon(
-            //             Icons.send,
-            //             color: Colors.white,
-            //           ),
-            //         ),
-            //       ),
-            //     ),
-            //     SizedBox(
-            //       height: h * 0.02,
-            //     ),
-            //     InkWell(
-            //       onTap: () {},
-            //       child: Container(
-            //         width: w * 0.1,
-            //         height: h * 0.07,
-            //         decoration: BoxDecoration(
-            //           color: const Color(0xff3366cc),
-            //           borderRadius: BorderRadius.circular(w * 0.02),
-            //         ),
-            //         child: const Center(
-            //           child: Icon(
-            //             Icons.info_outline,
-            //             color: Colors.white,
-            //           ),
-            //         ),
-            //       ),
-            //     ),
-            //   ],
-            // ),
           ],
         ),
       ),
