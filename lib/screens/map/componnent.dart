@@ -134,7 +134,7 @@ class _LocationCardState extends State<LocationCard> {
                     SizedBox(
                       width: w * 0.4,
                       child: Text(
-                        distance.toStringAsFixed(3).toString() + " " + "Km",
+                        distance.toStringAsFixed(2).toString() + " " + "Km",
                         style: const TextStyle(
                           fontWeight: FontWeight.bold,
                           color: Color(0xff3366cc),
@@ -156,7 +156,7 @@ class _LocationCardState extends State<LocationCard> {
                     SizedBox(
                       width: w * 0.4,
                       child: Text(
-                        time.toStringAsFixed(3).toString() + " " + "Hour",
+                        time.toStringAsFixed(2).toString() + " " + "Hour",
                         style: const TextStyle(
                           fontWeight: FontWeight.bold,
                           color: Color(0xff3366cc),
