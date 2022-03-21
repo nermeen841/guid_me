@@ -6,7 +6,7 @@ import 'package:guid_me/DBhelper/AppCubit/appState.dart';
 import 'package:guid_me/DBhelper/AppCubit/cubit.dart';
 import 'package:guid_me/generated/locale_keys.g.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'component.dart';
+import '../constant/component.dart';
 
 class FavouriteScreen extends StatefulWidget {
   @override

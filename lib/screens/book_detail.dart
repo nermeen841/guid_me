@@ -9,7 +9,7 @@ import 'package:guid_me/DBhelper/AppCubit/cubit.dart';
 import 'package:guid_me/generated/locale_keys.g.dart';
 import 'package:guid_me/screens/map/map_track.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'component.dart';
+import '../constant/component.dart';
 import 'package:easy_localization/easy_localization.dart';
 
 class BookDetailScreen extends StatefulWidget {

@@ -5,7 +5,7 @@ import 'package:guid_me/DBhelper/AppCubit/appState.dart';
 import 'package:guid_me/DBhelper/AppCubit/cubit.dart';
 import 'package:guid_me/generated/locale_keys.g.dart';
 import 'package:easy_localization/easy_localization.dart';
-import 'full_image.dart';
+import '../screens/full_image.dart';
 
 Widget buildBookDetailCard(
         {required double h,
