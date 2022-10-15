@@ -46,6 +46,7 @@ class _MapTrackScreenState extends State<MapTrackScreen> {
     super.initState();
     createPolyline();
     getLanguage();
+   
     markers.add(
       Marker(
         //add start location marker
@@ -75,6 +76,8 @@ class _MapTrackScreenState extends State<MapTrackScreen> {
           icon: BitmapDescriptor.defaultMarker //Icon for Marker
           ),
     );
+  
+  
   }
 
   createPolyline() {

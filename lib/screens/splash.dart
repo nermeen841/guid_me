@@ -15,7 +15,9 @@ class SplashScreen extends StatefulWidget {
 }
 
 class _SplashScreenState extends State<SplashScreen> {
+  
   final location = Location();
+  
   getLocation() async {
     var _serviceEnabled = await location.serviceEnabled();
 
